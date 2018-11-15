@@ -1,9 +1,10 @@
 /**
- * @version		1.0.3
- * @package		Engintron for WHM
- * @author		Fotis Evangelou (Nuevvo) - http://nuevvo.com
- * @copyright	Copyright (c) 2010 - 2014 Nuevvo Webware P.C. All rights reserved.
- * @license		GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
+ * @version    1.0.x
+ * @package    Engintron for cPanel/WHM
+ * @author     Fotis Evangelou (https://kodeka.io)
+ * @url        https://engintron.com
+ * @copyright  Copyright (c) 2018 Kodeka OÜ. All rights reserved.
+ * @license    GNU/GPL license: https://www.gnu.org/copyleft/gpl.html
  */
 
 function confirm(id) {
