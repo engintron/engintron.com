@@ -9,6 +9,8 @@ To use such domain exclusions, edit your "Custom Rules" file in the Engintron WH
 
 To exclude domain "example.com", uncomment the following 3 lines and make sure you replace example.com with your actual domain or subdomain and also replace XXX.XXX.XXX.XXX with your actual dedicated or shared IP (depending on the exclusion scenario). Repeat the process for more domains.
 
-    if ($host ~ "example.com") {
-        set $PROXY_DOMAIN_OR_IP "XXX.XXX.XXX.XXX";
-    }
+```
+if ($host ~ "example.com") {
+    set $PROXY_DOMAIN_OR_IP "XXX.XXX.XXX.XXX";
+}
+```

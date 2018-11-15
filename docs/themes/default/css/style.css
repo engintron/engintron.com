@@ -14,6 +14,7 @@ h4 {font-size:20px;text-transform:uppercase;color:#744cbc;}
 ul, ol {margin:0 0 0 16px;padding:4px;}
     li {padding:2px 4px;margin:0;}
     li a {display:block;}
+pre {font-family:'Source Sans Pro',sans-serif;background-color:#f5f7f9;border-radius:4px;font-size:85%;line-height:1.45;overflow:auto;padding:10px;white-space:pre-wrap;}
 
 /* Structure */
 .gridContainer {display:grid;grid-template-columns:1fr;grid-template-rows:180px calc(100vh - 220px) 40px;}
