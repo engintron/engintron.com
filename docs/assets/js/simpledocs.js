@@ -34,7 +34,7 @@
     // Configuration
     var outputContainer = '[data-sd-content]';
     var navContainer = '[data-sd-menu]';
-    var gaDomain = ''; // e.g. https://engintron.com
+    var gaDomain = 'https://engintron.com'; // e.g. https://engintron.com
 
     // Parse Markdown (showdown.js)
     var converter = new showdown.Converter();
@@ -44,8 +44,8 @@
         if (domain && typeof(ga) !== 'undefined') {
             ga('send', {
                 hitType: 'pageview',
-                title: title,
-                page: url.replace(domain, '')
+                title: document.title,
+                page: window.location.href.replace(domain, '')
             });
         }
     }
