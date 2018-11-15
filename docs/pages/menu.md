@@ -1,5 +1,6 @@
 ### Navigation Menu
 
+* [START](pages/index.md)
 * UPDATES
     * [Changelog](pages/Changelog.md)
 * MUST READ
