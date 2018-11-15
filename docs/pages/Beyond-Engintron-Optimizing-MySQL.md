@@ -6,7 +6,7 @@ Let's assume you use Engintron (the easy way).
 
 In Engintron's WHM app click on "Edit my.cnf". Copy the contents of the editor (your current my.cnf configuration) in a text file in case you need to revert back.
 
-Next copy the optimized MySQL configuration which you can find here: https://gist.github.com/fevangelou/0da9941e67a9c9bb2596
+Next copy the optimized MySQL configuration which you can find here: [https://gist.github.com/fevangelou/0da9941e67a9c9bb2596](https://gist.github.com/fevangelou/0da9941e67a9c9bb2596)
 
 Now paste that into the editor window in Engintron's WHM app.
 

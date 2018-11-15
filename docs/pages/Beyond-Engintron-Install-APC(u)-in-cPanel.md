@@ -12,7 +12,7 @@ There are many tutorials out there covering how to install APCu from command lin
 
 FastCGI mode is known to be a fast and secure way to run PHP on your server... FastCGI is also preferred compared to mod\_php as it allows websites to execute with the user's permissions (like with suPHP) and as some claim, it's also the fastest from all other PHP builds.
 
-If you want to re-build your server with FastCGI, you can grab a ready-made profile to upload and use in WHM: https://engintron.com/files/cpanel/engintron.dtd
+If you want to re-build your server with FastCGI, you can grab a ready-made profile to upload and use in WHM: [https://github.com/engintron/engintron/blob/master/cpanel/EasyApache_Profiles/EA3/Engintron_EA3_2016.yaml](https://github.com/engintron/engintron/blob/master/cpanel/EasyApache_Profiles/EA3/Engintron_EA3_2016.yaml)
 
 Don't bother trying to install APCu via cPanel's PECL modules installer. It's just broken.
 

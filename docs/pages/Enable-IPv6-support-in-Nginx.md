@@ -88,12 +88,12 @@ If you see "tcp6..." entries with Nginx on them, you're good to go!
 ## The fine print
 Keep in mind that IPv6 connectivity is currently limited worldwide. For any visitor to browse websites through via IPv6 addresses, they MUST also have an IPv6 capable connectivity. If they don't, they can't see a thing.
 
-Try this on your own: https://test-ipv6.com/
+Try this on your own: [https://test-ipv6.com/](https://test-ipv6.com/)
 
 If you get "No IPv6 address detected", then your internet connection is not IPv6 capable and thus you won't be able to browse the IPv6 web.
 
 Some useful links:
-- https://en.wikipedia.org/wiki/IPv6\_deployment
-- https://www.google.com/intl/en/ipv6/statistics.html#tab=per-country-ipv6-adoption&tab=per-country-ipv6-adoption
+- [https://en.wikipedia.org/wiki/IPv6_deployment](https://en.wikipedia.org/wiki/IPv6_deployment)
+- [https://www.google.com/intl/en/ipv6/statistics.html#tab=per-country-ipv6-adoption&tab=per-country-ipv6-adoption](https://www.google.com/intl/en/ipv6/statistics.html#tab=per-country-ipv6-adoption&tab=per-country-ipv6-adoption)
 
 Keep this in mind if you plan on going IPv6 only for your server ;)

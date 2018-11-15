@@ -8,7 +8,7 @@ Login to your server as root user via a terminal and then execute this to uninst
 sh /etc/cpnginx/uninstall.sh
 ```
 
-Or according to this https://cpnginx.com/documentation/introduction.php#uninstallation if you can locate the installer file (install.py), then execute this:
+Or according to this [https://cpnginx.com/documentation/introduction.php#uninstallation](https://cpnginx.com/documentation/introduction.php#uninstallation) if you can locate the installer file (install.py), then execute this:
 ```
 chmod 755 install.py &&  ./install.py remove
 ```
@@ -22,4 +22,4 @@ tar xf nginxadmin.tar
 cd publicnginx
 ./nginxinstaller uninstall
 ```
-(taken from https://www.nginxcp.com/installation-instruction/)
+(taken from [https://www.nginxcp.com/installation-instruction/](https://www.nginxcp.com/installation-instruction/))

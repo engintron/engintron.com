@@ -7,7 +7,7 @@ Some examples include:
 - Cache exclusions for domains, subdomains or even directories
 - Any other global or domain specific rule (redirect, process etc.)
 
-The "Custom Rules" file is constantly updated with every release of Engintron to include new examples of what's possible. Be sure to check it our here: https://github.com/engintron/engintron/blob/master/nginx/custom\_rules
+The "Custom Rules" file is constantly updated with every release of Engintron to include new examples of what's possible. Be sure to check it our here: [https://github.com/engintron/engintron/blob/master/nginx/custom_rules](https://github.com/engintron/engintron/blob/master/nginx/custom_rules)
 
 Below we cover a few use cases for such custom rules in Nginx.
 

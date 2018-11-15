@@ -4,7 +4,7 @@ First things first though...
 
 Make sure you are using Apache 2.4. It's way better and faster than Apache 2.2. You'll have to rebuild your server to do this via EasyApache.
 
-After you rebuild Apache, you can have a look at Linode's knowledge base as a starting point https://www.linode.com/docs/websites/apache-tips-and-tricks/tuning-your-apache-server or better still, try using ApacheBuddy to get insights on your existing configuration: https://github.com/gusmaskowitz/apachebuddy.pl
+After you rebuild Apache, you can have a look at Linode's knowledge base as a starting point [https://www.linode.com/docs/websites/apache-tips-and-tricks/tuning-your-apache-server](https://www.linode.com/docs/websites/apache-tips-and-tricks/tuning-your-apache-server) or better still, try using ApacheBuddy to get insights on your existing configuration: [https://github.com/gusmaskowitz/apachebuddy.pl](https://github.com/gusmaskowitz/apachebuddy.pl)
 
 To give you an idea, this is a good starting point (for most servers):
 

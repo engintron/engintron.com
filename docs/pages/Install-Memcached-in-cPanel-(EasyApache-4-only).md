@@ -21,7 +21,7 @@ If you rebuild your cPanel's LAMP stack with EasyApache, you need to re-install 
 
 The installer is also provided as standalone here:
 
-https://gist.github.com/fevangelou/c4852324c9f218870ffd5fbb2ddde591
+[https://gist.github.com/fevangelou/c4852324c9f218870ffd5fbb2ddde591](https://gist.github.com/fevangelou/c4852324c9f218870ffd5fbb2ddde591)
 
 Although the script was written for CentOS 7, it should work on CentOS 6 as well provided you're also using EasyApache 4. Likewise, it should work on CloudLinux 6 & 7.
 

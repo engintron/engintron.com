@@ -46,7 +46,7 @@ See how the port is overridden and the protocol enforced internally to HTTP only
 * Added dynamic cache exclusions for Invision Power Board/Suite versions 4.x (3.x rules where already present).
 * Nginx proxy rules for cPanel-specific subdomains (e.g. cpanel.*, whm.*, webdisk.* etc.) have been commented out for both HTTP and HTTPS traffic. This allows cPanel or LetsEncrypt certificates to now be issued for these subdomains as well.
 * Updated Nginx mime type definitions (covers additions to documents file types, web fonts etc.).
-* Properly restart MySQL when applying any configuration in my.cnf. You previously required to execute terminal commands manually when changing values that required "flushing" MySQL's temp files (ib\_logfile*). The means you can fully manage your MySQL's configuration from the Engintron WHM app entirely. And don't forget to use this uber-awesome optimized my.cnf config: https://gist.github.com/fevangelou/0da9941e67a9c9bb2596
+* Properly restart MySQL when applying any configuration in my.cnf. You previously required to execute terminal commands manually when changing values that required "flushing" MySQL's temp files (ib\_logfile*). The means you can fully manage your MySQL's configuration from the Engintron WHM app entirely. And don't forget to use this uber-awesome optimized my.cnf config: [https://gist.github.com/fevangelou/0da9941e67a9c9bb2596](https://gist.github.com/fevangelou/0da9941e67a9c9bb2596)
 * Restart PHP-FPM whenever Apache is restarted in various Engintron operations.
 * Bundled optimized EasyApache 3 & EasyApache 4 profiles with Engintron. See the related guides in the Engintron Wiki.
 
@@ -56,7 +56,7 @@ See how the port is overridden and the protocol enforced internally to HTTP only
 * Added CS-Cart cookie exclusions for Nginx's dynamic cache.
 
 ### Mar 16th, 2018 - v1.8.8
-* Resolved a potential security issue in which resellers with access to Engintron's WHM app could view (but not edit) any system file on the server, by manipulating the edit view URL in Engintron's WHM app. Issue originally referenced here: https://github.com/engintron/engintron/issues/768
+* Resolved a potential security issue in which resellers with access to Engintron's WHM app could view (but not edit) any system file on the server, by manipulating the edit view URL in Engintron's WHM app. Issue originally referenced here: [https://github.com/engintron/engintron/issues/768](https://github.com/engintron/engintron/issues/768)
 * Added APCu setup support for PHP 7.2 and fixed an issue (in recent cPanel releases) where *pecl.ini files would attempt to load the APCu binaries and thus generate an error\_log at the root of your cPanel server. For installing APCu on your server, refer to [this wiki entry](pages/Beyond-Engintron-Install-APC(u.md)-in-cPanel).
 * Updated IPv6 syntax in Nginx configuration files. IPv6 is still not enabled by default as in systems without native IPv6 networking enabled, Nginx will fail to compile its configuration files and thus stop serving websites.
 
@@ -64,7 +64,7 @@ See how the port is overridden and the protocol enforced internally to HTTP only
 * Updated the way Nginx's HTTPS vhosts are regenerated when Apache's configuration is updated. Additionally, a log file of the last restart of Nginx & Apache is created at `/etc/nginx/utilities/https_vhosts.log` with a timestamp at the top of the file.
 * Updated Apache httpd.conf path check (to cover different installations reported by users) and increased the interval time for checking when that file changes from 10 to 15 secs per minute to allow less powerful servers to have time to generate both their Apache and Nginx configurations in time. That interval can also be manually changed to a higher value if required. See the top of the file `/etc/nginx/utilities/https_vhosts.sh` and adjust accordingly. Until there's a permanent configuration option for this, you'll have to manually update your custom interval time whenever you update Engintron.
 * Updated cache exclusions for the latest release (v4) of IPS (Invision Community). Sites using that version will have dynamic caching entirely off.
-* Added "proxy\_hide\_header Upgrade;" to resolve certificate issues on desktop Safari as originally referenced here: https://trac.nginx.org/nginx/ticket/915
+* Added "proxy\_hide\_header Upgrade;" to resolve certificate issues on desktop Safari as originally referenced here: [https://trac.nginx.org/nginx/ticket/915](https://trac.nginx.org/nginx/ticket/915)
 * Updated CloudFlare IP pool in `/etc/nginx/nginx.conf`.
 
 ### Oct 17th, 2017 - v1.8.6
@@ -217,7 +217,7 @@ _**IMPORTANT!** After you update Engintron to v1.7.3 and click on the menu link 
 
 ### Dec 3rd, 2014 - v1.0.4 Build 20141203
 
-* Since mod\_rpaf was dropped from its original developer, it's now been updated with the fork that's been actively maintained here: https://github.com/gnif/mod\_rpaf
+* Since mod\_rpaf was dropped from its original developer, it's now been updated with the fork that's been actively maintained here: [https://github.com/gnif/mod_rpaf](https://github.com/gnif/mod_rpaf)
 * Moved all static assets of the app dashboard onto GitHub's CDN. This simply results to a cleaner Engintron script.
 * Removed the line "proxy\_hide\_header Set-Cookie;" from proxy.conf as it was causing issues with WordPress websites not being properly cached (thank you @AgentGod)
 

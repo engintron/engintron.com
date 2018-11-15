@@ -2,13 +2,13 @@ Q. **How popular is Engintron?**
 A. At the time of writing (April 2018) and since Feb 2016, **Engintron has been deployed into more than 50,000 servers worldwide**! It is the [most popular (starred) cPanel plugin on GitHub](https://github.com/topics/cpanel?o=desc&s=stars) and [the most reviewed cPanel plugin in the cPanel Applications Catalog](https://applications.cpanel.net/listings/view/Engintron-Nginx-on-cPanel).
 
 Q. **How do I get started?**  
-A. Installation is pretty straightforward as you may have read above already. There is however extensive documentation available in the wiki: https://engintron.com/docs - we even include general optimization guides for your cPanel server!
+A. Installation is pretty straightforward as you may have read above already. There is however extensive documentation available in the wiki: [https://engintron.com/docs](https://engintron.com/docs) - we even include general optimization guides for your cPanel server!
 
 Q. **Any requirements I should be aware of before installing Engintron?**  
 A. Yeap, there are a few. Have a look here: pages/Requirements
 
 Q. **Engintron is awesome! But I have a problem or I want to report a bug! Where do I do that?**  
-A. The "Issues" section here on GitHub - https://github.com/engintron/engintron/issues - is the right place to report bugs or request for help. We will eventually offer a dedicated support forum when we launch the new Engintron website.
+A. The "Issues" section here on GitHub - [https://github.com/engintron/engintron/issues](https://github.com/engintron/engintron/issues) - is the right place to report bugs or request for help. We will eventually offer a dedicated support forum when we launch the new Engintron website.
 
 Q. **I have dozens of .htaccess rules in Apache. Will I have to re-write those for Nginx?**  
 A. Of course not! Nginx works as a proxy to Apache, it does not operate as the direct webserver of your content. In other words, you just install Engintron and everything in Apache (and your apps or websites) will function as it did before. Nginx requires no maintenance. It just works.

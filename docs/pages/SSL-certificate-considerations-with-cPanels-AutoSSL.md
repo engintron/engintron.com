@@ -2,7 +2,7 @@ As you probably know already, cPanel's AutoSSL feature supports "Let's Encrypt" 
 
 That being said, here are some overall considerations to have your server work smoothly with Engintron and TLS/SSL certificates for all your domains...
 
-a) If you can choose between "Let's Encrypt" and "Comodo" in AutoSSL, **PREFER** the "Let's Encrypt" option and use the associated plugin by cPanel. More info is available here https://documentation.cpanel.net/display/CKB/The+Let's+Encrypt+Plugin and the installation is a matter of simply executing this as root user:
+a) If you can choose between "Let's Encrypt" and "Comodo" in AutoSSL, **PREFER** the "Let's Encrypt" option and use the associated plugin by cPanel. More info is available here [https://documentation.cpanel.net/display/CKB/The+Let's+Encrypt+Plugin](https://documentation.cpanel.net/display/CKB/The+Let's+Encrypt+Plugin) and the installation is a matter of simply executing this as root user:
 ```
 /scripts/install_lets_encrypt_autossl_provider
 ```

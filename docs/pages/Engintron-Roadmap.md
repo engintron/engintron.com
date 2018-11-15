@@ -12,7 +12,7 @@
 * Utilities: Add APC(u) & Opcache GUIs for globally monitoring and controlling APC(u) & Opcache respectively
 * User cPanel option to enable/disable Nginx caching or direct proxying per domain or per account.
 * Proper AWStats logging.
-* Add anonymous metrics gathering for development purposes. These metrics will contain generic usage data like number of active Engintron servers worldwide, cPanel version distribution, OS share, Nginx version active, Apache version active etc. You can see an example here: https://metrics.getk2.org (for K2, a highly popular Joomla extension)
+* Add anonymous metrics gathering for development purposes. These metrics will contain generic usage data like number of active Engintron servers worldwide, cPanel version distribution, OS share, Nginx version active, Apache version active etc. You can see an example here: [https://metrics.getk2.org](https://metrics.getk2.org) (for K2, a highly popular Joomla extension)
 
 
 ### Features to consider for Engintron v2.0.0 or newer

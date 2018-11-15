@@ -10,4 +10,4 @@ proxy_send_timeout            180s;
 
 Then save and restart Apache/Nginx.
 
-b) The better but harder way is to optimize your slow backend. This can be done by tuning the configuration files for Apache, MySQL, PHP and even the system itself. Have a look at the Optimization Guides https://engintron.com/docs#beyond-engintron---optimization-guides for a great starting point.
+b) The better but harder way is to optimize your slow backend. This can be done by tuning the configuration files for Apache, MySQL, PHP and even the system itself. Have a look at the [Optimization Guides](https://engintron.com/docs/#/pages/Beyond-Engintron-cPanel-WHM-initial-optimal-setup) for a great starting point.
