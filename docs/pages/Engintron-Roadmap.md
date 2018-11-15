@@ -20,4 +20,4 @@ _(Last updated: Feb 2017)_
 ### Features to consider for Engintron v2.0.0 or newer
 
 * Redesigned WHM app dashboard for Engintron - the purpose is to make Engintron your go-to dashboard when logged in WHM
-![Engintron v2](https://engintron.com/assets/screenshots/2.0.0_mockup.png)
+![Engintron v2](./images/screenshots/2.0.0_mockup.png)

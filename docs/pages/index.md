@@ -1,4 +1,4 @@
-Welcome to the Engintron Documentation portal!
+## Welcome to our documentation portal
 
 This is where we document how Engintron works as well as optimization guides for cPanel/WHM.
 
