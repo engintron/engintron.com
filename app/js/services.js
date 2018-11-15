@@ -44,11 +44,11 @@
 	}
 
 	/* === Engintron App === */
-	var CURRENT_VERSION = '1.9.1';
+	var CURRENT_VERSION = '1.9.2';
 	var b = document.getElementsByTagName('body')[0];
 
 	if(versionCompare(CURRENT_VERSION, ENGINTRON_VERSION)>0){
-		var notice = '<div style="font-size:12px;text-align:center;padding:10px;background:#00b243;color:#fff;opacity:0.9;position:absolute;top:0;left:0;right:0;border-bottom:2px solid #008d23;z-index:999999;"><div style="width:92%;margin:auto;padding:0;">A newer version of Engintron (v'+CURRENT_VERSION+') is now available. Update Engintron to the latest version <a style="color:#fff;font-weight:bold;" href="engintron.php?op=engintron_update_stable">for Nginx "stable"</a> or <a style="color:#fff;font-weight:bold;" href="engintron.php?op=engintron_update_mainline">for Nginx "mainline"</a>.<br />For more info check the <a style="color:#fff;font-weight:bold;" target="_blank" href="https://github.com/engintron/engintron/wiki/Changelog">Engintron release changelog</a>.</div></div>';
+		var notice = '<div style="font-size:12px;text-align:center;padding:10px;background:#00b243;color:#fff;opacity:0.9;position:absolute;top:0;left:0;right:0;border-bottom:2px solid #008d23;z-index:999999;"><div style="width:92%;margin:auto;padding:0;">A newer version of Engintron (v'+CURRENT_VERSION+') is now available. Update Engintron to the latest version <a style="color:#fff;font-weight:bold;" href="engintron.php?op=engintron_update_stable">for Nginx "stable"</a> or <a style="color:#fff;font-weight:bold;" href="engintron.php?op=engintron_update_mainline">for Nginx "mainline"</a>.<br />For more info check the <a style="color:#fff;font-weight:bold;" target="_blank" href="https://engintron.com/docs/#/pages/Changelog">Engintron release changelog</a>.</div></div>';
 		var mountNotice = document.createElement('div');
 		mountNotice.innerHTML = notice;
 		b.appendChild(mountNotice);
