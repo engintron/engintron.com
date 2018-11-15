@@ -1,4 +1,4 @@
-Engintron.com
+Engintron
 =============
 
 Nginx® is a powerful open source web server that was built to scale websites to millions of visitors. cPanel® is the leading hosting control panel worldwide.
