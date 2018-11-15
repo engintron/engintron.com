@@ -32,7 +32,7 @@ See how the port is overridden and the protocol enforced internally to HTTP only
 
 ### May 24th, 2018 - v1.8.12
 * Commented out "proxy\_cache\_background\_update" from /etc/nginx/proxy\_params\_dynamic as it was forcing the 1s micro-cache for form submissions (using POST, redirect, GET) which is pretty normal to submit in less than 1 second. This option was a performance fail-safe, so it's left commented out in case anyone wants to use (and knows it won't conflict with their sites/apps).
-* Mute PHP warning being output in /etc/nginx/utilities/https\_vhosts.php and thus breaking the HTTPS vhost generation, when the timezone is not configured in PHP's settings. 
+* Mute PHP warning being output in /etc/nginx/utilities/https\_vhosts.php and thus breaking the HTTPS vhost generation, when the timezone is not configured in PHP's settings.
 
 ### May 22nd, 2018 - v1.8.11
 * Updated WooCommerce exclusions (cookies and paths) so expect even better performance & behaviour with WordPress/WooCommerce sites. If you host exclusively WordPress sites, you can now safely increase "proxy\_cache\_valid" in /etc/nginx/proxy\_params\_dynamic from "1s" (1 second - aka micro-caching) to minutes (e.g. "3m"). If you do this, Nginx can serve dynamic content entirely from its cache for content that CAN be cached, so expect a MAJOR boost in performance. You're welcome :)
@@ -43,7 +43,7 @@ See how the port is overridden and the protocol enforced internally to HTTP only
 ### Apr 27th, 2018 - v1.8.10
 * The Engintron WHM app will now open within the cPanel UI and not in a new window. Includes various small code improvements as well. Keep in mind that when you navigate Engintron's options, the WHM sidebar will always expand (and not maintain its state). This is a bug in the cPanel WHP PHP API for which the cPanel team is aware of and will be (hopefully) sorted soon.
 * Fixed updating /engintron.sh file when updating Engintron from the terminal.
-* Added dynamic cache exclusions for Invision Power Board/Suite versions 4.x (3.x rules where already present). 
+* Added dynamic cache exclusions for Invision Power Board/Suite versions 4.x (3.x rules where already present).
 * Nginx proxy rules for cPanel-specific subdomains (e.g. cpanel.*, whm.*, webdisk.* etc.) have been commented out for both HTTP and HTTPS traffic. This allows cPanel or LetsEncrypt certificates to now be issued for these subdomains as well.
 * Updated Nginx mime type definitions (covers additions to documents file types, web fonts etc.).
 * Properly restart MySQL when applying any configuration in my.cnf. You previously required to execute terminal commands manually when changing values that required "flushing" MySQL's temp files (ib\_logfile*). The means you can fully manage your MySQL's configuration from the Engintron WHM app entirely. And don't forget to use this uber-awesome optimized my.cnf config: https://gist.github.com/fevangelou/0da9941e67a9c9bb2596
@@ -57,7 +57,7 @@ See how the port is overridden and the protocol enforced internally to HTTP only
 
 ### Mar 16th, 2018 - v1.8.8
 * Resolved a potential security issue in which resellers with access to Engintron's WHM app could view (but not edit) any system file on the server, by manipulating the edit view URL in Engintron's WHM app. Issue originally referenced here: https://github.com/engintron/engintron/issues/768
-* Added APCu setup support for PHP 7.2 and fixed an issue (in recent cPanel releases) where *pecl.ini files would attempt to load the APCu binaries and thus generate an error\_log at the root of your cPanel server. For installing APCu on your server, refer to [this wiki entry](pages/Beyond-Engintron:-Install-APC(u.md)-in-cPanel).
+* Added APCu setup support for PHP 7.2 and fixed an issue (in recent cPanel releases) where *pecl.ini files would attempt to load the APCu binaries and thus generate an error\_log at the root of your cPanel server. For installing APCu on your server, refer to [this wiki entry](pages/Beyond-Engintron-Install-APC(u.md)-in-cPanel).
 * Updated IPv6 syntax in Nginx configuration files. IPv6 is still not enabled by default as in systems without native IPv6 networking enabled, Nginx will fail to compile its configuration files and thus stop serving websites.
 
 ### Nov 21st, 2017 - v1.8.7
@@ -133,7 +133,7 @@ _**IMPORTANT!** After you update Engintron to v1.7.3 and click on the menu link 
 ### Aug 30th, 2016 - v1.7.2
 
 * Added CMS specific exclusions for the dynamic cache (Joomla, K2 for Joomla, WordPress and IPB supported for now). This allows to use longer cache times (beyond the 1 sec micro-cache shipped by default with Engintron), e.g. 1 or 2 mins or more, for even better performance, without affecting logged-in users. That's because Nginx now detects cookies and paths used by the CMSs currently supported to switch off its cache entirely. Check the proxy\_params\_dynamic configuration file for more info... ***However for Joomla specifically*** you MUST have a certain entry point for users to login. Engintron will exclude the URLs /login and /connect by default, if you wish to create menu items to these URLs where you can place your site's login page. These "entry point" pages/URLs make sure that Nginx's cache is switched off when these URLs are accessed, thus allowing Joomla to serve a fresh page to each user with the correct form token ID and therefore allow the user to login without getting an "invalid token" warnings.
-* Added ***?nocache*** query string which developers can use to bypass Nginx's cache if using longer cache times for dynamic content (as it's now possible, as stated above). If for example you wish to see the page http://example.com/blog without Nginx caching the output, then you can just call http://example.com/blog?nocache. Simple!
+* Added ***?nocache*** query string which developers can use to bypass Nginx's cache if using longer cache times for dynamic content (as it's now possible, as stated above). If for example you wish to see the page **http://example.com/blog** without Nginx caching the output, then you can just call **http://example.com/blog?nocache**. Simple!
 * Addressed potential security issue through which an attacker could fake their IP and bypass any IP-based restrictions set in apps or websites. Special thanks to [Alex Vorona](https://github.com/voron) for spotting this issue.
 * If [CSF](https://configserver.com/cp/csf.html) is installed, Engintron will now add the Nginx executable to CSF's process ignore list file.
 * Removed cookie stripping from static files (Nginx will only ignore them to build its cache) as this was causing issues in certain sites.
