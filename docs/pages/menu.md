@@ -1,5 +1,7 @@
 ### Navigation Menu
 
+* UPDATES
+    * [Changelog](pages/Changelog.md)
 * MUST READ
     * [Requirements](pages/Requirements.md)
 * GENERAL
@@ -9,7 +11,6 @@
     * [Using Engintron](pages/04.-Using-Engintron.md)
     * [Why is Engintron a better solution compared to other Nginx installers for cPanel](pages/05.-Why-is-Engintron-a-better-solution-compared-to-other-Nginx-installers-for-cPanel.md)
     * [FAQ](pages/FAQ.md)
-    * [Changelog](pages/Changelog.md)
     * [Engintron Roadmap](pages/Engintron-Roadmap.md)
 * TROUBLESHOOTING
     * ["Welcome to Nginx on Fedora" showing on all sites after upgrading Engintron or cPanel (aka Nginx from EPEL repo issue)](pages/%22Welcome-to-Nginx-on-Fedora%22-showing-on-all-sites-after-upgrading-Engintron-or-cPanel-(aka-Nginx-from-EPEL-repo-issue).md)
