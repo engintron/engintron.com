@@ -16,7 +16,7 @@ ul, ol {margin:0 0 0 16px;padding:4px;}
     li a {display:block;}
 
 /* Structure */
-.gridContainer {display:grid;grid-template-columns:1fr;grid-template-rows:180px calc(100vh - 260px) 80px;}
+.gridContainer {display:grid;grid-template-columns:1fr;grid-template-rows:180px calc(100vh - 220px) 40px;}
     .header {background:#744cbc url(../images/hero.jpg) 0 50% repeat-x;background-size:cover;background-blend-mode:multiply;border-bottom:1px solid #d4dadf;text-align:center;display:grid;grid-template-rows:1fr;grid-template-columns:1fr;}
         .header h1 {align-self:center;}
             .header h1 a {font-family:'Source Sans Pro',sans-serif;font-size:40px;font-weight:400;color:#f8f8f8;padding:4px 0;}
@@ -29,7 +29,6 @@ ul, ol {margin:0 0 0 16px;padding:4px;}
         .content {background:#fff;padding:20px 20px 60px 20px;grid-column:span 1;overflow:auto;}
             .content img {width:100%;height:auto;border:8px solid #f5f7f9;}
     .footer {background:#fff;border-top:1px solid #d4dadf;font-size:14px;text-align:center;}
-        .footer p:first-child {font-weight:bold;}
 
 @media (max-width:1200px) {
     .page {display:grid;grid-template-columns:1fr 2fr;}
