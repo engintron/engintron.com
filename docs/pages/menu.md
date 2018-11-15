@@ -16,7 +16,7 @@
     * [Check if visitor IPs are properly logged in Apache after installing Engintron](pages/Check-if-visitor-IPs-are-properly-logged-in-Apache-after-installing-Engintron.md)
     * [How to uninstall other Nginx plugins for cPanel (before installing Engintron)](pages/How-to-uninstall-other-Nginx-plugins-for-cPanel-(before-installing-Engintron).md)
     * [Fix "localhost could not be resolved" entries in your Nginx log files](pages/Fix-%22localhost-could-not-be-resolved%22-entries-in-your-Nginx-log-files.md)
-    * [Fix "110: Connection timed out" errors appearing in Nginx logs](pages/Fix-%22110:-Connection-timed-out%22-errors-appearing-in-Nginx-logs.md)
+    * [Fix "110: Connection timed out" errors appearing in Nginx logs](pages/Fix-%22110-Connection-timed-out%22-errors-appearing-in-Nginx-logs.md)
     * [SSL certificate changes not visible in Nginx? Here's a possible explanation & solution](pages/SSL-certificate-changes-not-visible-in-Nginx%3F-Here-s-a-possible-explanation-&-solution.md)
 * ADDITIONAL INFO, SETUP & GOTCHAS
     * [About Engintron's micro caching features](pages/About-Engintrons-micro-caching-features.md)
@@ -31,13 +31,13 @@
     * [Enable IPv6 support in Nginx (for IPv6 capable servers)](pages/Enable-IPv6-support-in-Nginx.md)
     * [Redirect webmail.domain.tld from HTTP to HTTPS](pages/Redirect-webmail.domain.tld-from-HTTP-to-HTTPS.md)
 * BEYOND ENGINTRON - OPTIMIZATION GUIDES
-    * [cPanel WHM initial optimal setup](pages/Beyond-Engintron:-cPanel-WHM-initial-optimal-setup.md)
-    * [Optimizing MySQL](pages/Beyond-Engintron:-Optimizing-MySQL.md)
-    * [Install APC(u) in cPanel](pages/Beyond-Engintron:-Install-APC(u)-in-cPanel.md)
+    * [cPanel WHM initial optimal setup](pages/Beyond-Engintron-cPanel-WHM-initial-optimal-setup.md)
+    * [Optimizing MySQL](pages/Beyond-Engintron-Optimizing-MySQL.md)
+    * [Install APC(u) in cPanel](pages/Beyond-Engintron-Install-APC(u)-in-cPanel.md)
     * [Install Memcached in cPanel (EasyApache 4 only)](pages/Install-Memcached-in-cPanel-(EasyApache-4-only).md)
-    * [Optimizing Apache](pages/Beyond-Engintron:-Optimizing-Apache.md)
-    * [Optimizing PHP FastCGI (EasyApache 3 only)](pages/Beyond-Engintron:-Optimizing-PHP-FastCGI-(under-EasyApache-3).md)
-    * [Optimizing CentOS](pages/Beyond-Engintron:-Optimizing-CentOS.md)
+    * [Optimizing Apache](pages/Beyond-Engintron-Optimizing-Apache.md)
+    * [Optimizing PHP FastCGI (EasyApache 3 only)](pages/Beyond-Engintron-Optimizing-PHP-FastCGI-(under-EasyApache-3).md)
+    * [Optimizing CentOS](pages/Beyond-Engintron-Optimizing-CentOS.md)
 * EXTENDING ENGINTRON
     * [3rd party scripts for Engintron](pages/3rd-party-scripts-for-Engintron.md)
 * USER CONTRIBUTED GUIDES
