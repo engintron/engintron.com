@@ -74,6 +74,7 @@
                     updateBrowser('#/' + page.slice(0, page.length - 3), title, output);
                 }
                 parseUrls(container);
+                $(container).scrollTop(0);
             },
             error: function(req, status, error) {
                 getPage('pages/404.md', '404 - Not found', container, true)

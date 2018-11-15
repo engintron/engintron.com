@@ -57,7 +57,7 @@ See how the port is overridden and the protocol enforced internally to HTTP only
 
 ### Mar 16th, 2018 - v1.8.8
 * Resolved a potential security issue in which resellers with access to Engintron's WHM app could view (but not edit) any system file on the server, by manipulating the edit view URL in Engintron's WHM app. Issue originally referenced here: [https://github.com/engintron/engintron/issues/768](https://github.com/engintron/engintron/issues/768)
-* Added APCu setup support for PHP 7.2 and fixed an issue (in recent cPanel releases) where *pecl.ini files would attempt to load the APCu binaries and thus generate an error\_log at the root of your cPanel server. For installing APCu on your server, refer to [this wiki entry](pages/Beyond-Engintron-Install-APC(u.md)-in-cPanel).
+* Added APCu setup support for PHP 7.2 and fixed an issue (in recent cPanel releases) where *pecl.ini files would attempt to load the APCu binaries and thus generate an error\_log at the root of your cPanel server. For installing APCu on your server, refer to [this wiki entry](pages/Beyond-Engintron-Install-APC(u)-in-cPanel.md).
 * Updated IPv6 syntax in Nginx configuration files. IPv6 is still not enabled by default as in systems without native IPv6 networking enabled, Nginx will fail to compile its configuration files and thus stop serving websites.
 
 ### Nov 21st, 2017 - v1.8.7
