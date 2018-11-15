@@ -27,7 +27,7 @@ See how the port is overridden and the protocol enforced internally to HTTP only
 
 ### June 29th, 2018 - v1.8.13
 * Added support for installing Engintron on Amazon Linux AMI (based on CentOS 6) and Amazon Linux 2 (based on CentOS 7).
-* Added new Memcached installer that does not use the EA4 Experimental repo from cPanel for the PHP modules but PECL (the original source) directly. This installer will also configure the related PHP module for Memcached for PHP 7.2 (unlike the EA4 Experimental repo which still has no support for 7.2). Install with `bash /usr/local/src/engintron/utilities/install_memcached_in_cpanel_ea4_no_exp_repo.sh`.
+* Added new Memcached installer that does not use the EA4 Experimental repo from cPanel for the PHP modules but PECL (the original source) directly. This installer will also configure the related PHP module for Memcached for PHP 7.2 (unlike the EA4 Experimental repo which still has no support for 7.2). Install with: `bash /usr/local/src/engintron/utilities/install_memcached_in_cpanel_ea4_no_exp_repo.sh`
 * Added new EA4 profile (v2 for 2018) which includes additional Apache modules (e.g. FastCGI) and ionCube v10 PHP modules for all PHP versions from 5.6 to 7.2.
 
 ### May 24th, 2018 - v1.8.12
