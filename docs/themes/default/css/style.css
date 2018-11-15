@@ -17,7 +17,7 @@ ul, ol {margin:0 0 0 16px;padding:4px;}
 pre {font-family:'Source Sans Pro',sans-serif;background-color:#f5f7f9;border-radius:4px;font-size:85%;line-height:1.45;overflow:auto;padding:10px;white-space:pre-wrap;}
 
 /* Structure */
-.gridContainer {display:grid;grid-template-columns:1fr;grid-template-rows:180px calc(100vh - 220px) 40px;}
+.gridContainer {display:grid;grid-template-columns:1fr;grid-template-rows:122px calc(100vh - 170px) 48px;}
     .header {background:#744cbc url(../images/hero.jpg) 0 50% repeat-x;background-size:cover;background-blend-mode:multiply;border-bottom:1px solid #d4dadf;text-align:center;display:grid;grid-template-rows:1fr;grid-template-columns:1fr;}
         .header h1 {align-self:center;}
             .header h1 a {font-family:'Source Sans Pro',sans-serif;font-size:40px;font-weight:400;color:#f8f8f8;padding:4px 0;}
