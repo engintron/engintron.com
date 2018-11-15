@@ -7,7 +7,7 @@ Some examples include:
 - Cache exclusions for domains, subdomains or even directories
 - Any other global or domain specific rule (redirect, process etc.)
 
-The "Custom Rules" file is constantly updated with every release of Engintron to include new examples of what's possible. Be sure to check it our here: https://github.com/engintron/engintron/blob/master/nginx/custom_rules
+The "Custom Rules" file is constantly updated with every release of Engintron to include new examples of what's possible. Be sure to check it our here: https://github.com/engintron/engintron/blob/master/nginx/custom\_rules
 
 Below we cover a few use cases for such custom rules in Nginx.
 
@@ -65,8 +65,8 @@ if ($host ~ "example.com") {
 ## DOMAIN AND URL PATH EXCLUSIONS FROM CACHING
 If you wish to exclude certain domains, subdomains or even full URL paths from micro-caching and/or static file caching, simply specify them below and use a colon (|) character as a separator. Remember that if you specify a "naked" domain name, e.g. mynicedomain.com, every subdomain e.g. support.mynicedomain.com will also be excluded from caching. Decide wisely!
 
-If you wish to disable ONLY micro-caching, then comment the line "set $CACHE_BYPASS_FOR_STATIC".
-If you wish to disable ONLY static file caching, then comment the line "set $CACHE_BYPASS_FOR_DYNAMIC".
+If you wish to disable ONLY micro-caching, then comment the line "set $CACHE\_BYPASS\_FOR\_STATIC".
+If you wish to disable ONLY static file caching, then comment the line "set $CACHE\_BYPASS\_FOR\_DYNAMIC".
 
 Note: Don't include the "http(s)://" portion of a URL.
 

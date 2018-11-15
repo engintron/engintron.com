@@ -23,7 +23,7 @@ Q. **I have a firewall like CSF on my cPanel server. Should I open up any additi
 A. Yes please. Make sure ports 8080 and 8443 are enabled in your firewall.
 
 Q. **Will it work with CloudFlare?**  
-A. Yes, but there is a minor gotcha. You need to adjust your "custom_rules" Nginx configuration file a bit. When you open that file via Engintron's WHM app, you'll see examples of the rules to add for Engintron to work seamlessly with CloudFlare. To briefly explain the process, you need to set your server's shared (main) IP and/or any additional dedicated IPs matching certain domains (everything is documented with examples in there).
+A. Yes, but there is a minor gotcha. You need to adjust your "custom\_rules" Nginx configuration file a bit. When you open that file via Engintron's WHM app, you'll see examples of the rules to add for Engintron to work seamlessly with CloudFlare. To briefly explain the process, you need to set your server's shared (main) IP and/or any additional dedicated IPs matching certain domains (everything is documented with examples in there).
 
 Q. **I have Munin installed on my cPanel server to monitor resources. Does Engintron setup Nginx graphs in Munin as well?**  
 A. Absolutely. Have a look at the "Using Engintron" document in our Wiki for a screenshot of the graphs you get for Nginx in Munin. If you install Munin after you first installed Engintron, simply re-install Engintron via WHM and you'll get the Nginx graphs in your newly set Munin installation.

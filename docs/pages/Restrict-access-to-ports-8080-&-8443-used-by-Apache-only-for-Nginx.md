@@ -2,7 +2,7 @@ _(originally posted by Engintron user [@speegs](https://github.com/speegs) in En
 
 To restrict access to ports 8080 & 8443 used by Apache only for Nginx, follow these steps:
 
-1. Install ConfigServer Firewall (CSF) from https://configserver.com/cp/csf.html - it's the best IPTables GUI for cPanel (and not only)!
+1. Install ConfigServer Firewall (CSF) from [https://configserver.com/cp/csf.html](https://configserver.com/cp/csf.html) - it's the best IPTables GUI for cPanel (and not only)!
 
 2. Edit the file /etc/csf/csf.allow (either via terminal or via CSF's WHM app) and append these lines:
 ```

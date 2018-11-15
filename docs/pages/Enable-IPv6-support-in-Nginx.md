@@ -51,7 +51,7 @@ to this:
 listen [::]:80 default_server;
 ```
 
-### c) /etc/nginx/utilities/https_vhosts.php
+### c) /etc/nginx/utilities/https\_vhosts.php
 This is the file that generates the Nginx definition files for all HTTPS traffic (port 443). Around line 45, change this:
 ```
 #listen [::]:'.NGINX_HTTPS_PORT.' ssl http2 default_server;
@@ -93,7 +93,7 @@ Try this on your own: https://test-ipv6.com/
 If you get "No IPv6 address detected", then your internet connection is not IPv6 capable and thus you won't be able to browse the IPv6 web.
 
 Some useful links:
-- https://en.wikipedia.org/wiki/IPv6_deployment
+- https://en.wikipedia.org/wiki/IPv6\_deployment
 - https://www.google.com/intl/en/ipv6/statistics.html#tab=per-country-ipv6-adoption&tab=per-country-ipv6-adoption
 
 Keep this in mind if you plan on going IPv6 only for your server ;)

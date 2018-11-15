@@ -14,6 +14,6 @@ Depending on your CPU count and RAM, adapt the configuration based on the commen
 
 Once you're ready, save your edits and check the box to restart MySQL. After that, MySQL will use the new configuration.
 
-Now, check your sites. They should work. If they don't, you'll have to check the MySQL error log located at /var/lib/mysql/mysql_error.log
+Now, check your sites. They should work. If they don't, you'll have to check the MySQL error log located at /var/lib/mysql/mysql\_error.log
 
 Also consult the my.cnf comments at the top for additional troubleshooting.

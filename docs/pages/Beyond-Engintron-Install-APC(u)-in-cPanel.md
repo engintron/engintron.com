@@ -10,7 +10,7 @@ Since PHP 5.3.x is considered obsolete, I'll cover the steps to have APCu instal
 
 There are many tutorials out there covering how to install APCu from command line (as root user), but none on how to install APCu on a WHM/cPanel server " the easy way ". And it's actually pretty easy provided your server is executing PHP in FastCGI mode (the most optimal setup). Default cPanel installations usually run PHP in suPHP mode, which does not allow APCu to be installed. If you have full control of the server, you can use EasyApache in WHM to "rebuild" your system with PHP in FastCGI mode.
 
-FastCGI mode is known to be a fast and secure way to run PHP on your server... FastCGI is also preferred compared to mod_php as it allows websites to execute with the user's permissions (like with suPHP) and as some claim, it's also the fastest from all other PHP builds.
+FastCGI mode is known to be a fast and secure way to run PHP on your server... FastCGI is also preferred compared to mod\_php as it allows websites to execute with the user's permissions (like with suPHP) and as some claim, it's also the fastest from all other PHP builds.
 
 If you want to re-build your server with FastCGI, you can grab a ready-made profile to upload and use in WHM: https://engintron.com/files/cpanel/engintron.dtd
 
@@ -82,7 +82,7 @@ Restart Apache via WHM.
 
 ### 3. ADJUST SETTINGS FOR APCU
 
-If you wish to adjust the APCu values above, you can now do so via "PHP Configuration Editor" in WHM, after selecting the "Advanced Mode" editing option. These 2 values will be at the very top. APCu has a lot more options but "apc.shm_size" is obviously the most critical as it defines the memory pool to hold all cache objects coming from your CMS (Joomla, WordPress etc.).
+If you wish to adjust the APCu values above, you can now do so via "PHP Configuration Editor" in WHM, after selecting the "Advanced Mode" editing option. These 2 values will be at the very top. APCu has a lot more options but "apc.shm\_size" is obviously the most critical as it defines the memory pool to hold all cache objects coming from your CMS (Joomla, WordPress etc.).
 
 Remember that whenever your edit your PHP's configuration, you need to restart Apache for the changes to take effect.
 

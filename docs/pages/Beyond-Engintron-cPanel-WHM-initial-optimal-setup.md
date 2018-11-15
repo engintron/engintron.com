@@ -15,7 +15,7 @@ _(These steps are generally recommended for newly launched cPanel servers)_
 - Using the terminal, install CSF (an IPTables frontend & more) and afterwards configure it so that ports 8080 & 8443 are allowd for Apache to work properly when Engintron (and thus Nginx) is installed. Installation instructions at: https://download.configserver.com/csf/install.txt
 - Under "cPanel » Manage Plugins", install Munin to keep track of how resources are consumed on your server.
 - Under "Software » MySQL/MariaDB Upgrade", choose the database software and version you want to use.
-- Depending on your EasyApache version (EA3 or EA4), grab the latest profile here to install: https://github.com/engintron/engintron/tree/master/cpanel/EasyApache_Profiles
+- Depending on your EasyApache version (EA3 or EA4), grab the latest profile here to install: https://github.com/engintron/engintron/tree/master/cpanel/EasyApache\_Profiles
 - Install Engintron (of course) :)
 - Follow the rest of the "Beyond Engintron" guides in this wiki to optimize Apache, MySQL, PHP and CentOS.
 - Finally, setup your user accounts and domains in cPanel/WHM

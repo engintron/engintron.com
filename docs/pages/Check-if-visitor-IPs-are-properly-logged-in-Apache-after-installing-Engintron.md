@@ -41,8 +41,8 @@ $verdict = ($serverIP==$loggedUserIP) ? '<h2 style="color:red;">Verdict: NO</h2>
 </html>
 ```
 
-Upload the file on some /public_html folder in your cPanel server and visit the /ip.php page from the web.
+Upload the file on some /public\_html folder in your cPanel server and visit the /ip.php page from the web.
 
-**Is the verdict YES?** Then you're cool. Do you still NOT see visitor IPs in your Apache logs? Well, did you check in both files that Apache uses for HTTP and HTTPS traffic? These files are located in "/usr/local/apache/domlogs/" and named after this format respectively: domain.tld & domain.tld-ssl_log
+**Is the verdict YES?** Then you're cool. Do you still NOT see visitor IPs in your Apache logs? Well, did you check in both files that Apache uses for HTTP and HTTPS traffic? These files are located in "/usr/local/apache/domlogs/" and named after this format respectively: domain.tld & domain.tld-ssl\_log
 
-**Is the verdict NO?** Then the Apache module mod_remoteip was either not properly installed or your Apache's configuration file overwrote the LogFormat changes done by Engintron to assist in proper IP logging. Try re-installing Engintron to fix the problem.
+**Is the verdict NO?** Then the Apache module mod\_remoteip was either not properly installed or your Apache's configuration file overwrote the LogFormat changes done by Engintron to assist in proper IP logging. Try re-installing Engintron to fix the problem.

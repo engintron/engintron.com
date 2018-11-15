@@ -4,13 +4,13 @@ I have edited Engintron's Nginx config to support true, native HTTPS offloading 
 
 Here is what I did:
 
-1. Edit /etc/apache2/conf.d/includes/pre_virtualhost_global.conf and append:
+1. Edit /etc/apache2/conf.d/includes/pre\_virtualhost\_global.conf and append:
 `SetEnvIf Ssl-Offloaded 1 HTTPS=on`
 
-2. Edit /etc/nginx/common_https.conf and change:
+2. Edit /etc/nginx/common\_https.conf and change:
 `set $PROXY_TO_PORT 8443;` to `set $PROXY_TO_PORT 8080;`
 
-3. Also in /etc/nginx/common_https.conf added the ssl-offloaded header to the location backend block:
+3. Also in /etc/nginx/common\_https.conf added the ssl-offloaded header to the location backend block:
 ```
 location @backend {
     include proxy_params_common;
@@ -22,7 +22,7 @@ location @backend {
 }
 ```
 
-4. Edit /etc/nginx/proxy_params_common to update proxy_pass:
+4. Edit /etc/nginx/proxy\_params\_common to update proxy\_pass:
 `proxy_pass http://$PROXY_DOMAIN_OR_IP:8080;`
 
 
@@ -49,4 +49,4 @@ RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
 ```
 
 **One more thing!**
-This is slightly unrelated, but sysadmins do note... when using Engintron's Nginx in front of Apache, we should remove mod_deflate from EasyApache 4. Otherwise, we will waste CPU cycles by GZIPing content twice on the web server (once on Apache, once on nginx) for no reason. This will give a very slight performance boost.
+This is slightly unrelated, but sysadmins do note... when using Engintron's Nginx in front of Apache, we should remove mod\_deflate from EasyApache 4. Otherwise, we will waste CPU cycles by GZIPing content twice on the web server (once on Apache, once on nginx) for no reason. This will give a very slight performance boost.

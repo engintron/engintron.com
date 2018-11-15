@@ -2,7 +2,7 @@
 
 There are 2 ways to solve this:
 
-a) The quick & simple way is to bump the timeout values in Nginx's configuration so it waits more for the backend to respond. Current wait time is 180s (3 mins) but you can safely increase this say to 360s or more. Simply edit the file "proxy_params_common" and adjust "180s" in these 2 lines:
+a) The quick & simple way is to bump the timeout values in Nginx's configuration so it waits more for the backend to respond. Current wait time is 180s (3 mins) but you can safely increase this say to 360s or more. Simply edit the file "proxy\_params\_common" and adjust "180s" in these 2 lines:
 ```
 proxy_read_timeout            180s;
 proxy_send_timeout            180s;
