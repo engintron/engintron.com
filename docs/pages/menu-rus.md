@@ -41,7 +41,7 @@
     * [Оптимизация CentOS](pages/Beyond-Engintron-Optimizing-CentOS-rus.md)
 * РАСШИРЕНИЯ ENGINTRON
     * [Сторонние скрипты для Engintron](pages/3rd-party-scripts-for-Engintron-rus.md)
-* USER CONTRIBUTED GUIDES
+* Руководства по настройке от пользователей
     * [CentOS 6 и поддержка HTTP 2 ALPN](pages/CentOS-6-and-HTTP-2-ALPN-support-rus.md)
     * [Разгрузка HTTPS-трафика для Nginx](pages/Offload-HTTPS-traffic-to-Nginx-only-rus.md)
     * [Как логировать IP-адреса посетителей при использовании Engintron в cPanel/WHM](https://www.damchey.com/2018/01/how-to-log-real-visitor-ip-when-using-engintron-on-cpanel/)
