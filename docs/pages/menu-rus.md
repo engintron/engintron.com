@@ -13,9 +13,9 @@
     * [ЧаВо](pages/FAQ-rus.md)
     * [Путь развития Engintron](pages/Engintron-Roadmap-rus.md)
 * Проблемы и решения
-    * ["Welcome to Nginx on Fedora" showing on all sites after upgrading Engintron or cPanel (aka Nginx from EPEL repo issue)](pages/%22Welcome-to-Nginx-on-Fedora%22-showing-on-all-sites-after-upgrading-Engintron-or-cPanel-(aka-Nginx-from-EPEL-repo-issue)-rus.md)
-    * [Check if visitor IPs are properly logged in Apache after installing Engintron](pages/Check-if-visitor-IPs-are-properly-logged-in-Apache-after-installing-Engintron-rus.md)
-    * [How to uninstall other Nginx plugins for cPanel (before installing Engintron)](pages/How-to-uninstall-other-Nginx-plugins-for-cPanel-(before-installing-Engintron)-rus.md)
+    * [Вывод "Welcome to Nginx on Fedora" на всех сайтах после обновления Engintron или cPanel (aka проблема Nginx из репозитория EPEL)](pages/%22Welcome-to-Nginx-on-Fedora%22-showing-on-all-sites-after-upgrading-Engintron-or-cPanel-(aka-Nginx-from-EPEL-repo-issue)-rus.md)
+    * [Проверка корректности отображения IP-адресов посетителей после установки Engintron](pages/Check-if-visitor-IPs-are-properly-logged-in-Apache-after-installing-Engintron-rus.md)
+    * [Как удалить другие расширения cPanel для интеграции Nginx (перед установкой Engintron)](pages/How-to-uninstall-other-Nginx-plugins-for-cPanel-(before-installing-Engintron)-rus.md)
     g* [Fix "localhost could not be resolved" entries in your Nginx log files](pages/Fix-%22localhost-could-not-be-resolved%22-entries-in-your-Nginx-log-files-rus.md)
     * [Fix "110: Connection timed out" errors appearing in Nginx logs](pages/Fix-%22110-Connection-timed-out%22-errors-appearing-in-Nginx-logs-rus.md)
     * [SSL certificate changes not visible in Nginx? Here's a possible explanation & solution](pages/SSL-certificate-changes-not-visible-in-Nginx%3F-Here-s-a-possible-explanation-&-solution-rus.md)
