@@ -1,0 +1,6 @@
+Перед установкой Engintron следует уяснить несколько вещей.
+
+1. Перед тем как задать вопрос, прочитайте в документации раздел "Проблемы и решения". **Серьёзно**.
+2. С версии v1.8.0 Engintron управляет файловыми операциями через cPanel, что позволяет плавно обрабатывать HTTPS. Engintron написан на BASH и PHP, это предполагает, что open_basedir в вашей системе отключен. Кроме того, если PHP работает через PHP-FPM либо как модуль CGI или FastCGI, то права доступа и владельцы файлов и директорий должны быть соответствующим образом откорректированы для избежания каких-либо проблем с отключенным open\_basedir.
+3. При использовании брандмауэра CSF (или похожего), убедитесь, что порты 8080 и 8443 разрешены. Веб-сервер Apache будет использовать их, когда Nginx займёт 80 и 443 порты. Дополнительно рекомендуем ознакомиться с [pages/Restrict-access-to-ports-8080-&-8443-used-by-Apache-only-for-Nginx](pages/Restrict-access-to-ports-8080-&-8443-used-by-Apache-only-for-Nginx-rus.md)
+4. Если в cPanel уже используется какой-либо другой плагин интеграции с Nginx, удалите его. Как это сделать описано тут: [pages/How-to-uninstall-other-Nginx-plugins-for-cPanel-(before-installing-Engintron)](pages/How-to-uninstall-other-Nginx-plugins-for-cPanel-(before-installing-Engintron)-rus.md)
