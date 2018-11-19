@@ -1,8 +1,8 @@
-***To update to a newer version of Engintron, [please have a look here](pages/02.-Installation-(and-updates).md).***
+***Для обновления Engintron, [обратитесь к руководству](pages/02.-Installation-(and-updates).md).***
 
-### November 15th, 2018 - v1.9.2
-* Replaced rawgit.com CDN (for mod_rpaf) with jsDelivr.
-* Updated copyrights.
+### Ноябрь 15th, 2018 - v1.9.2
+* Произведена замена rawgit.com CDN (для модуля mod_rpaf) на jsDelivr.
+* Обновлены копирайты.
 
 ### August 17th, 2018 - v1.9.1
 * Fixed Horde webmail forwarding. If you previously tried to open Horde from webmail.domain.tld (either via http:// or https://), cPanel would throw a 404 error. This is now fixed.
