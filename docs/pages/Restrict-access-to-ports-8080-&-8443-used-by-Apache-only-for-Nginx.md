@@ -14,6 +14,8 @@ tcp|in|d=8443|s=1.2.3.4 # Replace 1.2.3.4 with your server's shared IP - if you 
 
 3. Edit /etc/csf/csf.deny (either via terminal or via CSF's WHM app) and append this line:
 ```
-tcp|in|d=8080|s=0.0.0.0/0 # Block all connections to port 8080 except those already allowed in csf.allow
-tcp|in|d=8443|s=0.0.0.0/0 # Block all connections to port 8443 except those already allowed in csf.allow
+# Block all connections to port 8080 except those already allowed in csf.allow
+tcp|in|d=8080|s=0.0.0.0/0 # do not delete
+# Block all connections to port 8443 except those already allowed in csf.allow
+tcp|in|d=8443|s=0.0.0.0/0 # do not delete
 ```
