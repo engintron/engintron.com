@@ -1,5 +1,9 @@
 ***To update to a newer version of Engintron, [please have a look here](pages/02.-Installation-(and-updates).md).***
 
+### January 22nd, 2019 - v1.9.3
+* Fixed issue where Nginx ports where broken after disabling and then re-enabling Engintron. Bonus points for those who never disabled Engintron and thus never saw this issue ;)
+* Improvements in the "purge cache" function. Apparently Apache takes some time to restart in some servers (my guess is low-spec servers with hundreds of sites on them) and this caused issues in the Nginx "purge cache" function as the cache would empty first, then wait for Apache to restart to finally restart Nginx. In the meantime, if Apache took many seconds to restart, Nginx would try to locate cache files that were previously deleted. This is now resolved.
+
 ### November 15th, 2018 - v1.9.2
 * Replaced rawgit.com CDN (for mod_rpaf) with jsDelivr.
 * Updated copyrights.
