@@ -41,7 +41,7 @@ See how the port is overridden and the protocol enforced internally to HTTP only
 ### May 22nd, 2018 - v1.8.11
 * Updated WooCommerce exclusions (cookies and paths) so expect even better performance & behaviour with WordPress/WooCommerce sites. If you host exclusively WordPress sites, you can now safely increase "proxy\_cache\_valid" in /etc/nginx/proxy\_params\_dynamic from "1s" (1 second - aka micro-caching) to minutes (e.g. "3m"). If you do this, Nginx can serve dynamic content entirely from its cache for content that CAN be cached, so expect a MAJOR boost in performance. You're welcome :)
 * Main Nginx configuration has been updated for improved performance for busy sites/servers.
-* Added installer for Memcached in cPanel with EA4. WordPress, Joomla and other CMSs/apps that can utilize Memcached will see significant performance improvements. Installation instructions can be found here: pages/Install-Memcached-in-cPanel-(EasyApache-4-only)
+* Added installer for Memcached in cPanel with EA4. WordPress, Joomla and other CMSs/apps that can utilize Memcached will see significant performance improvements. Installation instructions can be found here: [pages/Install-Memcached-in-cPanel-(EasyApache-4-only)](pages/Install-Memcached-in-cPanel-(EasyApache-4-only).md)
 * Disabled any type of caching for cPanel specific subdomains (e.g. webmail.domain.tld, cpanel.domain.tld etc.).
 
 ### Apr 27th, 2018 - v1.8.10
