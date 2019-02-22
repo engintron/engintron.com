@@ -1,3 +1,5 @@
+## Excluding specific domains or domain paths from micro caching
+
 There are times when you'll want to exclude specific domains or domains paths from micro-caching. For example a forum website that it's not easy to make cookie-based exclusions for or custom apps that require a full path exclusion only.
 
 Since v1.7.3, you can add such exceptions in your "Custom Rules" file. Simply edit that file from the Engintron WHM app and at the bottom of the file, add something like this:

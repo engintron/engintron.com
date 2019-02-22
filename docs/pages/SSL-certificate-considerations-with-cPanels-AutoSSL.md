@@ -1,3 +1,5 @@
+## SSL certificate considerations with cPanel's AutoSSL
+
 As you probably know already, cPanel's AutoSSL feature supports "Let's Encrypt" certificates for some time now. However, because there is some sort of business partnership between cPanel and Comodo, "Let's Encrypt" is only available as a plugin which you have to install.
 
 That being said, here are some overall considerations to have your server work smoothly with Engintron and TLS/SSL certificates for all your domains...

@@ -1,3 +1,5 @@
+## Requirements
+
 A few things to keep in mind before installing Engintron.
 
 1. Read the Engintron Wiki section before posting questions in the "Issues" section. **Seriously**.

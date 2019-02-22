@@ -1,3 +1,5 @@
+## Offload HTTPS traffic to Nginx only
+
 _The following post was contributed by user [@cloudunboxed-olorinhenderson](https://github.com/cloudunboxed-olorinhenderson)..._
 
 I have edited Engintron's Nginx config to support true, native HTTPS offloading so that Apache only and always receives HTTP traffic. Equally, HTTPS is correctly handled with Apache's backend application so it functions seamlessly without knowing SSL is offloaded to Nginx only.

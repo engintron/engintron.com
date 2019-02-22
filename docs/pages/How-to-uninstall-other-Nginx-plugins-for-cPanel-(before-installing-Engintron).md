@@ -1,3 +1,5 @@
+## How to uninstall other Nginx plugins for cPanel (before installing Engintron)
+
 If you already have another Nginx plugin for cPanel installed on your server, it's best to remove it first, before installing Engintron. This way you'll have zero downtime and you essentially need not change any configuration file.
 
 Below you can find uninstall methods for such plugins as users report them.

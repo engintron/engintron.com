@@ -1,3 +1,5 @@
+## Fix "localhost could not be resolved" entries in your Nginx log files
+
 Until the following is merged with Engintron's codebase, here's a quick solution to fix the dreaded "localhost could not be resolved" entries in your Nginx log files.
 
 Edit your "custom rules" file via Engintron's WHM app and at the bottom, add this block

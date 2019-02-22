@@ -1,3 +1,5 @@
+## Redirect webmail.domain.tld from HTTP to HTTPS
+
 Nginx will not redirect any webmail.domain.tld request from HTTP to HTTPS by default (at the time of writing).
 
 If you wish to have this feature enabled, open up the Engintron WHM app to edit your Nginx "custom rules". In that file, append at the end the following configuration snippet.

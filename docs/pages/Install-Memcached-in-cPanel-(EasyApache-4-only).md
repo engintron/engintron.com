@@ -1,3 +1,5 @@
+## Install Memcached in cPanel (EasyApache 4 only)
+
 _(As of v1.8.11, the Memcached installer is shipped with Engintron)_
 
 a) Make sure Engintron is installed. If you installed it before May 22nd, 2018, simply update it.

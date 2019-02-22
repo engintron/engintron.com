@@ -1,3 +1,5 @@
+## Optimizing Apache
+
 The default Apache configuration that ships with cPanel is probably too restrictive. We can adjust Apache's basic configuration settings to improve both speed and CPU/RAM usage.
 
 First things first though...
@@ -8,13 +10,15 @@ After you rebuild Apache, you can have a look at Linode's knowledge base as a st
 
 To give you an idea, this is a good starting point (for most servers):
 
-	StartServers        5  
-	MinSpareServers     5  
-	MaxSpareServers     10  
-	ServerLimit         500  
-	MaxRequestWorkers   500 (this option was previously called MaxClients in Apache v2.2)  
-	MaxRequestsPerChild 4000  
-	Timeout             300
+```
+StartServers        5
+MinSpareServers     5
+MaxSpareServers     10
+ServerLimit         500
+MaxRequestWorkers   500 (this option was previously called MaxClients in Apache v2.2)
+MaxRequestsPerChild 4000
+Timeout             300
+```
 
 Especially the "Timeout" setting, can be lowered to say 120 or 60 (seconds) and make a huge difference in terms of CPU/RAM load.
 

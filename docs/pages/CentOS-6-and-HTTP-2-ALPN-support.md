@@ -1,3 +1,5 @@
+## CentOS 6 and HTTP 2 ALPN support
+
 _The following was contributed by user [@Technopope](https://github.com/Technopope)_
 
 HTTP/2 ALPN is not yet supported by Engintron on CentOS 6 because Engintron installs Nginx from the official nginx.org repositories, which do not have updated builds for CentOS 6.

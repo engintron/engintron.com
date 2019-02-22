@@ -10,7 +10,7 @@
     * [Installation (and updates)](pages/02.-Installation-(and-updates).md)
     * [Uninstalling](pages/03.-Uninstalling.md)
     * [Using Engintron](pages/04.-Using-Engintron.md)
-    * [Why is Engintron a better solution compared to other Nginx installers for cPanel](pages/05.-Why-is-Engintron-a-better-solution-compared-to-other-Nginx-installers-for-cPanel.md)
+    * [Why is Engintron a better solution compared to other Nginx (or performance related) plugins for cPanel](pages/05.-Why-is-Engintron-a-better-solution-compared-to-other-Nginx-installers-for-cPanel.md)
     * [FAQ](pages/FAQ.md)
     * [Engintron Roadmap](pages/Engintron-Roadmap.md)
 * TROUBLESHOOTING
@@ -45,4 +45,4 @@
 * USER CONTRIBUTED GUIDES
     * [CentOS 6 and HTTP 2 ALPN support](pages/CentOS-6-and-HTTP-2-ALPN-support.md)
     * [Offload HTTPS traffic to Nginx only](pages/Offload-HTTPS-traffic-to-Nginx-only.md)
-    * [How to log real visitor IP when using Engintron on cPanel/WHM](https://www.damchey.com/2018/01/how-to-log-real-visitor-ip-when-using-engintron-on-cpanel/)
+    * [How to log real visitor IP when using Engintron on cPanel/WHM](pages/how-to-log-real-visitor-ip-when-using-engintron-on-cpanel.md)

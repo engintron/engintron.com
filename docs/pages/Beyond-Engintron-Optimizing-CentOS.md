@@ -1,3 +1,5 @@
+## Optimizing CentOS
+
 Every Linux based distribution includes some resource limits one way or the other. These limits usually pose some restrictions for stability purposes on networking as well as how many open files the server can handle at any time.
 
 When you operate a web server under significant traffic (we're talking about millions of page views per month for all sites combined), these limits can often be reached.
@@ -45,6 +47,9 @@ To apply these changes, simply type this command as root user via SSH:
 $ sysctl -p
 ```
 
-If you error with "net.core.somaxconn" not being merged, change its value to "65535" and then re-merge with `$ sysctl -p`.
+If you get an error about "net.core.somaxconn" not being merged, change its value to "65535" and then re-merge with:
+```
+$ sysctl -p
+```
 
 The changes are now active and your system is able to handle more concurrent network connections (always limited by your server's available uplink though) as well as keep more open files at the same time, which is inevitable when serving lots of page views per month (in total) and generally have a busy server.

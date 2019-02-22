@@ -1,3 +1,5 @@
+## Engintron & (under development) domains that don't yet resolve (point) to your cPanel server
+
 By default, Nginx will redirect requests to the right domain IP.
 
 However there are cases where you want to enter a dedicated IP for use with Nginx:

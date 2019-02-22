@@ -1,3 +1,5 @@
+## Optimizing MySQL
+
 cPanel ships with MySQL un-optimized by default. This is not to ensure compatibility, it's just a process that requires some manual intervention, which is out of the scope of let-cPanel-do-everything that cPanel follows :)
 
 If you use Engintron, you'll notice there's an option to directly edit MySQL's my.cnf file - which is the main configuration file for MySQL. If you don't use Engintron (really?), then simply edit that file (it's located under /etc/my.cnf) using "nano" or an SFTP connection to the root directory of your server, so you can download, edit and then re-upload this file.

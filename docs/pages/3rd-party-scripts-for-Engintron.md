@@ -1,4 +1,6 @@
-## Generate domain exclusions
+## Thrid-party scripts for Engintron
+
+### Generate domain exclusions
 **By [@cpkwebsolutions](https://github.com/cpkwebsolutions)**
 
 * Description: On one of my WHM servers, I currently have 4 ip addresses with approx 100 wordpress sites spread randomly over them. This script generates the Engintron exclusions that are needed automatically (via cron every couple of minutes).

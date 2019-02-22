@@ -1,3 +1,5 @@
+## Changelog
+
 ***To update to a newer version of Engintron, [please have a look here](pages/02.-Installation-(and-updates).md).***
 
 ### January 22nd, 2019 - v1.9.3

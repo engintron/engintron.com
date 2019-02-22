@@ -1,3 +1,5 @@
+## Optimizing PHP FastCGI (EasyApache 3 only)
+
 The most optimal (and safest) way to run PHP on your cPanel server is currently as a FastCGI module. To optimize PHP when setup as a FastCGI module, you need to modify the related configuration file located under: /usr/local/apache/conf/php.conf
 
 For some initial insights, have a look here:

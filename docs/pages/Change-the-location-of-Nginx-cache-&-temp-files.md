@@ -1,3 +1,5 @@
+## Change the location of Nginx cache & temp files
+
 For some users, the default /tmp directory used by Engintron's Nginx for cache & temp files may quickly fill up either because of many/busy sites hosted on the server or because it is small in size.
 
 In such a case, you can easily move the location of Nginx's cache & temp files elsewhere.

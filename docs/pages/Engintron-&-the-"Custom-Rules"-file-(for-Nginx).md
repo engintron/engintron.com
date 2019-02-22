@@ -1,3 +1,5 @@
+## Engintron & the "Custom Rules" file (for Nginx)
+
 Engintron ships with a "Custom Rules" configuration file to allow you to set (you guessed right) your own custom rules for Nginx.
 
 Some examples include:
@@ -14,7 +16,7 @@ Below we cover a few use cases for such custom rules in Nginx.
 Remember that you should edit the "Custom Rules" file via Engintron's WHM app. Engintron will **NEVER** overwrite that file and it will always allow you to see the default "custom rules" file shipping with Engintron in case you wish to view what's been added/enabled s a feature or in case you mess up your rules and wish to revert changes.
 
 
-## FOR USE WITH CLOUDFLARE
+### FOR USE WITH CLOUDFLARE
 
 a) If your server has a single shared IP ONLY and you wish to use CloudFlare for any (or all) of your sites you will have to specify this shared IP address below otherwise you'll get errors from CloudFlare. This change will simply tell Nginx to skip DNS resolving and simply forward traffic to the shared IP.
 
@@ -47,7 +49,7 @@ if ($redirToSSL = "on") {
 ```
 
 
-## WHEN TO SPECIFY A DOMAIN IP
+### WHEN TO SPECIFY A DOMAIN IP
 By default, Nginx will redirect requests to the right domain IP by using DNS resolving. However there are cases where you want to specify an IP for use with Nginx:
 - When you use CloudFlare for certain domains only on your server, regardless of whether these domains use the server's shared IP or a dedicated IP.
 - When you are working on a domain which does not yet (DNS) resolve to your server, but you want to access it by modifying your computer's "hosts" file.
@@ -62,7 +64,7 @@ if ($host ~ "example.com") {
 ```
 
 
-## DOMAIN AND URL PATH EXCLUSIONS FROM CACHING
+### DOMAIN AND URL PATH EXCLUSIONS FROM CACHING
 If you wish to exclude certain domains, subdomains or even full URL paths from micro-caching and/or static file caching, simply specify them below and use a colon (|) character as a separator. Remember that if you specify a "naked" domain name, e.g. mynicedomain.com, every subdomain e.g. support.mynicedomain.com will also be excluded from caching. Decide wisely!
 
 If you wish to disable ONLY micro-caching, then comment the line "set $CACHE\_BYPASS\_FOR\_STATIC".

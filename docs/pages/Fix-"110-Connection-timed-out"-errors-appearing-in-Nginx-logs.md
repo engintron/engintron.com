@@ -1,3 +1,5 @@
+## Fix "110: Connection timed out" errors appearing in Nginx logs
+
 "110: Connection timed out..." errors appearing in Nginx logs are usually related to a slow backend (=Apache & PHP). This usually results in "504 Gateway Timeout" errors in the frontend for actual site visitors.
 
 There are 2 ways to solve this:

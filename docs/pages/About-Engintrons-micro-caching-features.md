@@ -1,3 +1,5 @@
+## About Engintron's micro caching features
+
 Micro-caching is a very effective technique to allow a server to withstand sudden spikes in traffic. If a server's capacity is measured from a dozen to a few hundred requests per second, then in the case of traffic bursts, your server will probably collapse and stop serving content overall. If you also host DNS on your cPanel server and the server collapses due to high traffic or load, then your domains will not respond to DNS queries at all, which means services like email may stop working entirely!
 
 Using micro-caching, the server could be able to handle thousands to dozens of thousands requests per second. The "trick" is simple: if you get 100 visitors requesting the same page in 1 sec, generate the page from the absolute first visitor and then serve the rest 99 visitors the cached copy of that page. Even if your sites have thousands of pages, the benefits are still enormous in terms of both performance and resource consumption.

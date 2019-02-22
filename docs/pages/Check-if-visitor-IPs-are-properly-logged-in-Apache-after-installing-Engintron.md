@@ -1,3 +1,5 @@
+## Check if visitor IPs are properly logged in Apache after installing Engintron
+
 Create a PHP file called **ip.php** and paste in this code snippet:
 
 ```

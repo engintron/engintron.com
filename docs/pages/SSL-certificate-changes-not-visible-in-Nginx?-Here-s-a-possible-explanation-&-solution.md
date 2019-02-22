@@ -1,3 +1,5 @@
+## SSL certificate changes not visible in Nginx? Here's a possible explanation & solution
+
 Whenever a SSL/TLS certificate change occurs, Apache's main configuration file changes and Nginx picks up these changes after 10 seconds (tops) in order to update its own configuration files.
 
 There have been users that complained this process does not work for them or that they had to resort to extra restarts for both Apache and Nginx (or individually).
