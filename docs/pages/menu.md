@@ -41,6 +41,7 @@
     * [Optimizing PHP FastCGI (EasyApache 3 only)](pages/Beyond-Engintron-Optimizing-PHP-FastCGI-(under-EasyApache-3).md)
     * [Optimizing CentOS](pages/Beyond-Engintron-Optimizing-CentOS.md)
 * EXTENDING ENGINTRON
+    * [Hosting Node apps on cPanel with the help of Engintron](pages/hosting-node-apps-on-cpanel.md)
     * [3rd party scripts for Engintron](pages/3rd-party-scripts-for-Engintron.md)
 * USER CONTRIBUTED GUIDES
     * [CentOS 6 and HTTP 2 ALPN support](pages/CentOS-6-and-HTTP-2-ALPN-support.md)
