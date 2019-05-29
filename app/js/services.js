@@ -44,7 +44,7 @@
 	}
 
 	/* === Engintron App === */
-	var CURRENT_VERSION = '1.9.3';
+	var CURRENT_VERSION = '1.10.0';
 	var b = document.getElementsByTagName('body')[0];
 
 	if(versionCompare(CURRENT_VERSION, ENGINTRON_VERSION)>0){

@@ -2,6 +2,14 @@
 
 ***To update to a newer version of Engintron, [please have a look here](pages/02.-Installation-(and-updates).md).***
 
+### May 29th, 2019 - v1.10.0
+* Moved Nginx cache purging after Apache has restarted as the previous execution order caused issues in servers where Apache takes a long time to restart - effectively breaking web serving.
+* Added force-restart option for Nginx. This option will come handy if for some reason Nginx cannot be restarted normally (and you see errors that indicate Nginx cannot bind to ports 80/443).
+* Added new healthcheck.sh utility script which you can use to monitor your server's health (uptime). If the check fails, Engintron restarts Apache, Nginx & PHP-FPM and sends an email to your email address of choice so you know when downtime was detected. You can also configure the script to force-restart Nginx in case it was abruptly cut off (which may cause normal restarting to fail) in low-RAM scenarios etc. Usage comments are inside the script.
+* Updated all utility scripts (installers) for APCu & Memcached to support latest released versions and PHP 7.3. Removed option to install APCu for PHP version 5.4 & 5.5. Default cache size for Memcached is now 512M (but you can override that upon installing the script).
+* Added new EA4 profile (Engintron\_EA4\_2019_v1) which supports PHP 5.6 to 7.3 and also installs the Node.js runtime.
+* Updated usage comments in "Custom Rules" with examples on how to host Node.js (and other non-PHP based) apps.
+
 ### January 22nd, 2019 - v1.9.3
 * Fixed issue where Nginx ports where broken after disabling and then re-enabling Engintron. Bonus points for those who never disabled Engintron and thus never saw this issue ;)
 * Improvements in the "purge cache" function. Apparently Apache takes some time to restart in some servers (my guess is low-spec servers with hundreds of sites on them) and this caused issues in the Nginx "purge cache" function as the cache would empty first, then wait for Apache to restart to finally restart Nginx. In the meantime, if Apache took many seconds to restart, Nginx would try to locate cache files that were previously deleted. This is now resolved.
