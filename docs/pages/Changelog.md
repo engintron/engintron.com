@@ -4,6 +4,7 @@
 
 ### May 29th, 2019 - v1.10.0
 * Moved Nginx cache purging after Apache has restarted as the previous execution order caused issues in servers where Apache takes a long time to restart - effectively breaking web serving.
+* For those using dynamic caching, the "Vary" HTTP header is now hidden by default, which translates to fewer cache objects and in turn more efficient caching overall.
 * Added force-restart option for Nginx. This option will come handy if for some reason Nginx cannot be restarted normally (and you see errors that indicate Nginx cannot bind to ports 80/443).
 * Added new healthcheck.sh utility script (located inside /usr/local/src/engintron/utilities/) which you can use to monitor your server's health (uptime). If the check fails, Engintron restarts Apache, Nginx & PHP-FPM and sends an email to your email address of choice so you know when downtime was detected. You can also configure the script to force-restart Nginx in case it was abruptly cut off (which may cause normal restarting to fail) in low-RAM scenarios etc. Usage comments are inside the script.
 * Updated all utility scripts (installers) for APCu & Memcached to support latest released versions and PHP 7.3. Removed option to install APCu for PHP version 5.4 & 5.5. Default cache size for Memcached is now 512M (but you can override that upon installing the script).
