@@ -1,23 +1,71 @@
 ## Engintron & CloudFlare
 
-Starting from version 1.6.0, the option to integrate CloudFlare with Engintron is a little simpler.
+Both CloudFlare and Engintron's Nginx operate as web proxies. This may cause connectivity issues (10xx errors in CloudFlare) - more info can be found here: [https://support.cloudflare.com/hc/en-us/articles/360029779472](https://support.cloudflare.com/hc/en-us/articles/360029779472)
 
-With the introduction of the "custom\_rules" Nginx configuration file, you have a fully documented way to setup CloudFlare for use with Engintron.
+To resolve such issues, you need to edit Engintron's "custom\_rules" file and add IP references to affected domains.
 
-What you essentially need to do is set your server's IP addresses (the shared IP as well as any dedicated IPs pointing to certain domains) and then restart Nginx. All this process can be done entirely via the Engintron app in WHM.
+All the configuration examples below should be placed inside Engintron's "custom\_rules" file, either via Engintron's WHM app (easiest method) or directly modifying the file /etc/nginx/custom\_rules and then restarting Nginx via terminal (with "service nginx restart").
 
-And Engintron also includes a few handy redirect tools for HTTP to HTTPS (with exclusions of course) so you don't have to create page rules in CloudFlare for each domain or add .htaccess rules in Apache.
+### cPanel server with a single shared IP
 
-There are a few important things to remember though:
+If your server has a single shared IP ONLY and you wish to use CloudFlare for any (or all) of your sites, you will have to specify this shared IP address in your "custom\_rules" file. This change will simply tell Nginx to skip DNS resolving and just forward traffic to the shared IP.
 
-- If you use SSL via CloudFlare and you do not have SSL certificates installed on your cPanel server, make sure you choose "Flexible SSL" inside "Crypto" settings. This way all HTTPS traffic from CloudFlare will be proxied to your Nginx HTTP port (80). If you get redirect loops in your browser after you perform this change, it means PHP is forcing an HTTP to HTTPS redirect causing this loop because CloudFlare proxies HTTPS to HTTP yet PHP sees an HTTP response internally thus forcing a redirect again to HTTPS (and here's your loop).
-- If you use SSL via CloudFlare and your domains also have SSL certificates installed on your cPanel server, make sure you choose "Strict SSL" or "Full SSL" inside "Crypto" settings. This way all HTTPS traffic from CloudFlare will be proxied to your Nginx HTTPS port (443).
-- If you have domains on CloudFlare that map to dedicated IP addresses on your server, then you will have to apply separate definitions for each such domain inside your "custom\_rules" file. HTTP or HTTPS traffic being proxied to your server will now always be served from Nginx.
+Here's what you'd add at the bottom of your "custom\_rules" file (replace 1.2.3.4 with your actual shared IP):
+```
+set $PROXY_DOMAIN_OR_IP "1.2.3.4"; # Use your cPanel's shared IP address here
+```
 
-### SOME EXAMPLES
+### cPanel server with multiple IPs
+If you utilize CloudFlare on a cPanel server with BOTH a shared IP and dedicated IPs for domains, you will have to set the IP for each such domain ONLY.
 
-Here are some use case scenarios to help clear things up if all the above sound confusing to you...
+For example:
+```
+if ($host ~ "some-domain-on-cloudflare.com") {
+    set $PROXY_DOMAIN_OR_IP "1.2.3.4";
+}
+```
 
-- You have 10 websites on your cPanel server all sharing 1 IP address. However only 4 use CloudFlare. If you don't edit "custom\_rules" as mentioned previously, the CloudFlare domains won't work and you'll see 10xx error messages from CloudFlare. For that reason, you need to edit "custom\_rules" in Engintron's WHM app and in there add your shared IP address, then restart Nginx. CloudFlare domains should work fine now.
-- You have 5 domains on your cPanel server sharing 1 IP address and one more domain which has a dedicated IP address because it has an SSL certificate assigned to it. Edit "custom\_rules" in Engintron's WHM app and apply the shared IP as in the previous example, but now make sure you also add a custom "if" block for the sixth domain which is attached to a dedicated IP. Inside this "if" block you'll define that domain's dedicated IP address. Now all domains should work fine.
+Again make sure you replace the domain name in the example (some-domain-on-cloudflare.com) & 1.2.3.4 with the actual domain name & dedicated IP respectively.
+
+### Real-world examples
+
+Here are some use case scenarios to help clear things up if all the above sound somewhat confusing to you...
+
+- You have 10 websites on your cPanel server, all sharing 1 IP address. However only 4 use CloudFlare. If you don't edit "custom\_rules" as mentioned previously, the CloudFlare domains won't work and you'll see 10xx error messages from CloudFlare. For that reason, you need to edit "custom\_rules" in Engintron's WHM app and in there add your shared IP address, then restart Nginx. CloudFlare domains should work fine now, along with the rest of your domain that are not on CLoudFlare.
+- You have 5 domains on your cPanel server sharing 1 IP address and one more domain which has a dedicated IP address because it has an SSL certificate assigned to it. Edit "custom\_rules" in Engintron's WHM app and apply the shared IP as in the previous case, but now make sure you also add a custom "if" block for the sixth domain which is attached to a dedicated IP. Inside this "if" block you'll define that domain's dedicated IP address. Now all domains should work fine.
 - You have a mixed amount of domains on or off CloudFlare, with or without dedicated IPs and SSL certificates. Again the rules are simple. Define your main shared IP address in "custom\_rules" and then for each dedicated IP create "if" blocks per domain.
+
+### I'm reselling cPanel so I don't know which domain uses CloudFlare
+
+In this case you'll have to create a script to automate the process of creating these routing rules. It's no easy task for sure, but it's beyond the scope of what Engintron can do for most cPanel server users.
+
+In the future, Engintron may include such a script to cover this use case as well.
+
+### Force redirect all domains on CloudFlare to HTTPS
+
+It is possible to force-redirect all your domains on CloudFlare to HTTPS if you have TLS/SSL enabled in CloudFlare's "Crypto" settings page.
+
+Make sure you use "Flexible SSL" there so CloudFlare proxies traffic from HTTPS to Nginx's HTTP port (80). This way you'll also be able to serve sites over HTTPS with no actual TLS/SSL certificate installed on the server, as long as they exist in CloudFlare and have CloudFlare's shared TLS/SSL certificate enabled there.
+
+To redirect to HTTPS, simply specify a block similar to the one below and make sure you set the domains you DO NOT want to automatically redirect to HTTPS.
+
+```
+# === Protocol redirect handling when using CloudFlare [start] ===
+
+set $redirToSSL "";
+if ($http_cf_visitor ~ '{"scheme":"http"}') {
+    set $redirToSSL "on";
+}
+
+# Set each domain you DO NOT want to automatically redirect to HTTPS when using CloudFlare only below
+# and repeat the process with additional "if" blocks for more domains
+
+if ($host ~ 'domain-to-exclude-from-redirect.com') {
+    set $redirToSSL "off";
+}
+if ($redirToSSL = "on") {
+    return 301 https://$host$request_uri;
+}
+
+# === Protocol redirect handling when using CloudFlare [finish] ===
+```
