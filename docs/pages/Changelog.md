@@ -2,6 +2,10 @@
 
 ***To update to a newer version of Engintron, [please have a look here](pages/02.-Installation-(and-updates).md).***
 
+### July 10th, 2019 - v1.11.0
+* Engintron is now IPv4 & IPv6 capable by default.
+* Added CloudFlare Public DNS IPs as resolver option in /etc/nginx.conf.
+
 ### May 29th, 2019 - v1.10.0
 * Moved Nginx cache purging after Apache has restarted as the previous execution order caused issues in servers where Apache takes a long time to restart - effectively breaking web serving.
 * For those using dynamic caching (enabled by default for micro-caching), the "Vary" HTTP header is now hidden by default, which translates to fewer cache objects and in turn more efficient caching overall.
