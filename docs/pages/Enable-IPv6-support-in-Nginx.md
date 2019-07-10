@@ -1,6 +1,6 @@
 ## Enable IPv6 support in Nginx (for IPv6 capable servers)
 
-_*** The following instructions apply to v1.8.7 (Build 20180119) and later..._
+_**IMPORTANT: The following instructions apply to v1.8.7 (Build 20180119) and up to v1.10.0 - as of v1.11.0, Engintron is IPv4 & IPv6 capable by default...**_
 
 IPv6 support is by default commented out in Nginx's configuration files. That's because servers that do not yet support IPv6 will cause Nginx to report errors when checking its configuration:
 
