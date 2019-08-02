@@ -1,12 +1,10 @@
-## Welcome to the new documentation portal for Engintron
+## Welcome to the documentation portal for Engintron
 
-#### *** WORK IN PROGRESS
+First time user of Engintron? Have a look at the docs organized in sections on your left.
 
-This is where we document how Engintron works, as well as optimization guides for cPanel/WHM.
+Besides the basic how-to's, you'll also find some handy guides on optimizing your CentOS servers with cPanel/WHM, as well as 3rd party guides and integrations.
 
 Looking for future development of Engintron? Have a look at the Development Roadmap: [pages/Engintron-Roadmap.md](pages/Engintron-Roadmap.md)
-
-Documents are organized in the sections on your left.
 
 **Thank you for using Engintron!**
 
