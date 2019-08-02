@@ -10,4 +10,4 @@ Documents are organized in the sections on your left.
 
 **Thank you for using Engintron!**
 
-_(updated May 2019)_
+_(updated August 2019)_
