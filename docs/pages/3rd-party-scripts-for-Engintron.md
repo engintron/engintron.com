@@ -1,4 +1,4 @@
-## Thrid-party scripts for Engintron
+## Third-party scripts for Engintron
 
 ### Generate domain exclusions
 **By [@cpkwebsolutions](https://github.com/cpkwebsolutions)**
