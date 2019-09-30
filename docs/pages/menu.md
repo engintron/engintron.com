@@ -27,7 +27,6 @@
     * [Engintron & CloudFlare](pages/Engintron-&-CloudFlare.md)
     * [Engintron & (under development) domains that don't yet resolve (point) to your cPanel server](pages/Engintron-and-under-development-domains-that-dont-yet-resolve-point-to-your-cPanel-server.md)
     * [Restrict access to ports 8080 & 8443 used by Apache only for Nginx](pages/Restrict-access-to-ports-8080-&-8443-used-by-Apache-only-for-Nginx.md)
-    * [Change the location of Nginx cache & temp files](pages/Change-the-location-of-Nginx-cache-&-temp-files.md)
     * [Cron job to purge Nginx cache & temp files](pages/Cron-job-to-purge-Nginx-cache-&-temp-files.md)
     * [SSL certificate considerations with cPanel's AutoSSL](pages/SSL-certificate-considerations-with-cPanels-AutoSSL.md)
     * [Enable IPv6 support in Nginx (for IPv6 capable servers)](pages/Enable-IPv6-support-in-Nginx.md)
