@@ -41,8 +41,7 @@
     * [Optimizing CentOS](pages/Beyond-Engintron-Optimizing-CentOS.md)
 * EXTENDING ENGINTRON
     * [Hosting Node apps on cPanel with the help of Engintron](pages/hosting-node-apps-on-cpanel.md)
-    * [3rd party scripts for Engintron](pages/3rd-party-scripts-for-Engintron.md)
-    * [Make OpenCart Engintron-friendly](pages/3rd-party-scripts-opencart-integration.md)
+    * [3rd-party software for Engintron](pages/3rd-party-software-for-Engintron.md)
 * USER CONTRIBUTED GUIDES
     * [CentOS 6 and HTTP 2 ALPN support](pages/CentOS-6-and-HTTP-2-ALPN-support.md)
     * [Offload HTTPS traffic to Nginx only](pages/Offload-HTTPS-traffic-to-Nginx-only.md)
