@@ -4,7 +4,7 @@
 
 ### January 9th, 2020 - v1.12.0
 * This is mainly a security release as it addresses log filtering in the Engintron WHM app. An attacker could inject malicious JS code as part of the HTTP headers that are logged in Nginx and in turn displayed into the Engintron WHM app. The issue was originally raised here: https://github.com/engintron/engintron/issues/1112
-* Improved the check resellers' permissions to access the Engintron WHM app.
+* Improved the resellers' permissions check before allowing access to the Engintron WHM app.
 * Minor code cleanups.
 
 ### July 10th, 2019 - v1.11.0
