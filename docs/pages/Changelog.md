@@ -2,6 +2,11 @@
 
 ***To update to a newer version of Engintron, [please have a look here](pages/02.-Installation-(and-updates).md).***
 
+### January 9th, 2020 - v1.12.0
+* This is mainly a security release as it address log filtering in the Engintron WHM app. An attacker could inject malicious JS code as part of the HTTP headers that are logged in Nginx and in turn displayed into the Engintron WHM app. The issue was originally raised here: https://github.com/engintron/engintron/issues/1112
+* Improved the check resellers' permissions to access the Engintron WHM app.
+* Minor code cleanups.
+
 ### July 10th, 2019 - v1.11.0
 * Engintron is now IPv4 & IPv6 capable by default.
 * Added CloudFlare Public DNS IPs as resolver option in /etc/nginx.conf.
