@@ -4,7 +4,7 @@
 
 ### March 28th, 2020 - v1.13.0
 * Added client support for TLV v1.3. CentOS's OpenSSL binaries don't yet seem to support TLS v1.3 but this will probably come soon, so let's make Engintron future-proof. By default Engintron will support as many clients as possible. If you want to restrict your client coverage, you can switch to a different protocols/ciphers combination by commenting out the intermediate or modern configuration (edit the file /etc/nginx/common_https.conf). Just make sure you only end up with one such configuration, otherwise Nginx will not restart.
-* Added cookie and path exclusions for Drupal
+* Added cookie and path exclusions for Drupal (as referenced in https://www.drupal.org/docs/7/caching-to-improve-performance/varnish-4x-configuration & https://www.drupal.org/docs/8/api/cache-api/cache-tags-varnish)
 * Added path exclusions for Craft CMS
 * Improved the resellers check for the Engintron WHM app to be more resilient to errors or missing details in the related file for resellers.
 * Added 2 new EA4 profiles: `Engintron_EA4_2020_v1` which you should prefer for your current or new cPanel setups (it also includes Node.js) and `Engintron_EA4_2020_v2` which includes PHP 7.4 support BUT is not yet supported by cPanel as PHP 7.4 has not arrived yet (latest update from the cPanel team was just yesterday - see https://features.cpanel.net/topic/php-7-4). Once PHP 7.4 support is official in cPanel, the APCu & Memcached installers will also be updated.
