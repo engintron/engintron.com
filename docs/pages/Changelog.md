@@ -9,6 +9,7 @@
 * Improved the resellers check for the Engintron WHM app to be more resilient to errors or missing details in the related file for resellers.
 * Added 2 new EA4 profiles: `Engintron_EA4_2020_v1` which you should prefer for your current or new cPanel setups (it also includes Node.js) and `Engintron_EA4_2020_v2` which includes PHP 7.4 support BUT is not yet supported by cPanel as PHP 7.4 has not arrived yet (latest update from the cPanel team was just yesterday - see https://features.cpanel.net/topic/php-7-4). Once PHP 7.4 support is official in cPanel, the APCu & Memcached installers will also be updated.
 * Updated APCu to v5.1.18 & Memcached to v3.1.5 for PHP 7.x in the related installers under "utilities".
+* IMPORTANT NOTE: When updating Engintron through WHM, if for any reason the update does not seem to complete (after a few minutes tops), then you need to run the upgrade (install) from the terminal. This was reported by some users during the last upgrade, so just keep it in mind. The reason why this happens is yet unknown as it's not widely reproducible (so it probably relates to certain configurations).
 
 ### January 9th, 2020 - v1.12.0
 * This is mainly a security release as it addresses log filtering in the Engintron WHM app. An attacker could inject malicious JS code as part of the HTTP headers that are logged in Nginx and in turn displayed into the Engintron WHM app. The issue was originally raised here: https://github.com/engintron/engintron/issues/1112
