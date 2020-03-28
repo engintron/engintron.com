@@ -3,7 +3,7 @@
 ***To update to a newer version of Engintron, [please have a look here](pages/02.-Installation-(and-updates).md).***
 
 ### March 28th, 2020 - v1.13.0
-* Added client support for TLV v1.3. CentOS's OpenSSL binaries don't yet seem to support TLS v1.3 but this will probably come soon, so let's make Engintron future-proof. By default Engintron will support as many clients as possible. If you want to restrict your client coverage, you can switch to a different protocols/ciphers combination by commenting out the intermediate or modern configuration. Just make sure you only end up with one such configuration, otherwise Nginx will not restart.
+* Added client support for TLV v1.3. CentOS's OpenSSL binaries don't yet seem to support TLS v1.3 but this will probably come soon, so let's make Engintron future-proof. By default Engintron will support as many clients as possible. If you want to restrict your client coverage, you can switch to a different protocols/ciphers combination by commenting out the intermediate or modern configuration (edit the file /etc/nginx/common_https.conf). Just make sure you only end up with one such configuration, otherwise Nginx will not restart.
 * Added cookie and path exclusions for Drupal
 * Added path exclusions for Craft CMS
 * Improved the resellers check for the Engintron WHM app to be more resilient to errors or missing details in the related file for resellers.
