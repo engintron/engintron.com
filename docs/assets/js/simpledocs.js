@@ -1,8 +1,8 @@
 /**
- * @version     1.0
+ * @version     1.1
  * @package     SimpleDocs.js
  * @author      JoomlaWorks https://www.joomlaworks.net
- * @copyright   Copyright (c) 2006 - 2018 JoomlaWorks Ltd. All rights reserved.
+ * @copyright   Copyright (c) 2006 - 2020 JoomlaWorks Ltd. All rights reserved.
  * @license     https://www.joomlaworks.net/license
  */
 
@@ -34,7 +34,7 @@
     // Configuration
     var outputContainer = '[data-sd-content]';
     var navContainer = '[data-sd-menu]';
-    var gaDomain = 'https://engintron.com'; // e.g. https://engintron.com
+    var gaDomain = 'https://engintron.com';
 
     // Parse Markdown (showdown.js)
     var converter = new showdown.Converter();
@@ -66,27 +66,28 @@
     // Get page
     function getPage(page, title, container, urlstate) {
         $.ajax({
-            url: page,
+            url: page + '.md',
             success: function(result) {
                 var output = converter.makeHtml(result);
                 $(container).html(output);
                 if (urlstate) {
-                    updateBrowser('#/' + page.slice(0, page.length - 3), title, output);
+                    updateBrowser('#/' + page, title, output);
                 }
                 parseUrls(container);
                 $(container).scrollTop(0);
             },
             error: function(req, status, error) {
-                getPage('pages/404.md', '404 - Not found', container, true)
+                getPage('pages/404', '404 - Not found', container, true)
             }
         });
     }
 
     // Parse all .md URLs
     function parseUrls(el) {
-        $(el + ' a[href\$=".md"]').each(function() {
+        $(el + ' a[href*="pages/"]').each(function() {
             var title = $(this).html();
             var page = $(this).attr('href');
+            $(this).attr('href', '#/' + page);
             $(this).on('click', function(e) {
                 e.preventDefault();
                 getPage(page, title, outputContainer, true);
@@ -96,7 +97,7 @@
 
     // Render the navigation menu
     function renderNav() {
-        var page = 'pages/menu.md';
+        var page = 'pages/menu';
         getPage(page, false, navContainer, false);
     }
 
@@ -111,10 +112,10 @@
             var match = null;
         }
         if (match) {
-            var page = match + ".md";
+            var page = match;
             getPage(page, false, outputContainer, urlstate);
         } else {
-            var page = 'pages/index.md';
+            var page = 'pages/index';
             getPage(page, false, outputContainer, urlstate);
         }
     }
