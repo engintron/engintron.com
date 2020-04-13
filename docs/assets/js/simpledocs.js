@@ -17,6 +17,7 @@
       where you want to output the menu and content (markdown page).
     - Add the JS files in order according to the requirements stated above (jQuery, Showdown.js, SimpleDocs.js).
     - Store markdown (.md) documents in the /pages/ subfolder by default.
+    - Internal relative links (to pages/*) should be referenced without using the .md extension.
     - Your are free to store your CSS, JS, images etc. wherever you want.
     - For your homepage create a /pages/index.md file (with some welcome message for example).
     - For your navigation create a /pages/menu.md file (with a simple Markdown list, nested or not).
