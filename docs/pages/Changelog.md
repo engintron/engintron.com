@@ -2,6 +2,12 @@
 
 ***To update to a newer version of Engintron, [please have a look here](pages/02.-Installation-(and-updates)).***
 
+### October 28th, 2020 - v1.14.0
+* Reinstate `$scheme` in `proxy_cache_key` as some users reported redirect loops caused with certain HTTP to HTTPS .htaccess rewrite rules.
+* Micro-improvements to both Nginx dynamic & static caching: use a larger cache pool by default, keep stale cache objects longer (useful if a site is hammered with traffic), don't make Nginx write caches to an intermediate temp folder, optimize static asset caching and lower static caching TTL to 10 secs from 1 min.
+* Add Magento-specific cookies to bypass.
+* Add support for PHP 7.4 in Engintron's APCu and Memcached installers.
+
 ### March 28th, 2020 - v1.13.0
 * Added client support for TLV v1.3. CentOS's OpenSSL binaries don't yet seem to support TLS v1.3 but this will probably come soon, so let's make Engintron future-proof. By default Engintron will support as many clients as possible. If you want to restrict your client coverage, you can switch to a different protocols/ciphers combination by commenting out the intermediate or modern configuration (edit the file /etc/nginx/common_https.conf). Just make sure you only end up with one such configuration, otherwise Nginx will not restart.
 * Added cookie and path exclusions for Drupal (as referenced in https://www.drupal.org/docs/7/caching-to-improve-performance/varnish-4x-configuration & https://www.drupal.org/docs/8/api/cache-api/cache-tags-varnish)
