@@ -2,8 +2,12 @@
 
 ***To update to a newer version of Engintron, [please have a look here](pages/02.-Installation-(and-updates)).***
 
+### May 4th, 2021 - v1.15.0
+* Cache only 200 response requests for static files. Original discussion here: https://github.com/engintron/engintron/issues/1306 (thanks to the Drupal folks for locating this bug).
+* Remove documents & other media from static caching, move CSV to JSON/XML block and lower cache-control TTL to 1m for that block.
+
 ### October 28th, 2020 - v1.14.0
-* Reinstate `$scheme` in `proxy_cache_key` as some users reported redirect loops caused with certain HTTP to HTTPS .htaccess rewrite rules.
+* Reinstate `$scheme` in `proxy_cache_key` (for dynamic caching) as some users reported redirect loops caused with certain HTTP to HTTPS .htaccess rewrite rules.
 * Micro-improvements to both Nginx dynamic & static caching: use a larger cache pool by default, keep stale cache objects longer (useful if a site is hammered with traffic), don't make Nginx write caches to an intermediate temp folder, optimize static asset caching and lower static caching TTL to 10 secs from 1 min.
 * Add Magento-specific cookies to bypass.
 * Add support for PHP 7.4 in Engintron's APCu and Memcached installers.
