@@ -3,7 +3,7 @@
 ***To update to a newer version of Engintron, [please have a look here](pages/02.-Installation-(and-updates)).***
 
 ### September 8th, 2021 - v1.16.0
-* Added extra data sanitisation for the Engintron WHM app - thank you Jamie Slome from [huntr.dev](https://huntr.dev).
+* Added extra data sanitisation - thank you Jamie Slome from [huntr.dev](https://huntr.dev) - for the Engintron WHM app.
 * Fixed long-standing WHM UI annoyances (expanded sidebar menu & analytics popping up all the time).
 * Updated Ace.js editor.
 * Added new contact endpoint.
