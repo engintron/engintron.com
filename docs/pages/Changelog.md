@@ -5,13 +5,13 @@
 ### January 2nd, 2022 - v2.0
 * Brand new series released!
 * Adds support for Enterprise Linux (EL) version 8 variants such as AlmaLinux 8, Rocky Linux 8 and CentOS 8 (the latter is EOL already but some folks may still use it). Although not tested, it should work on Oracle Linux 8 and Amazon Linux 2022.
-* Refreshed WHM app for Engintron: new layout and 100% responsive
+* Refreshed WHM app for Engintron with a new 100% responsive layout. The WHM app is now also lighter as any 3rd party scripts used in the past (e.g. for the GitHub button, the Twitter share widget or even the Font Awesome icons) are now removed.
 * Improved CLI commands
 * Apache 2.2 is no longer supported as it's really old and cPanel has dropped support for it for some time now. Likewise, the installer for Apache's RPAF module is now removed.
 * New simplified one-liner for installing/updating Engintron: `curl -sSL https://raw.githubusercontent.com/engintron/engintron/master/engintron.sh | bash -s -- install` (a wget version is also available on the project's GitHub repo). You can run the install/update command anywhere in your terminal (you don't have to "cd" to the server's / directory anymore).
 * Engintron's files are now installed under "/opt/engintron" (by following the FHS standard for 3rd party apps) and a symlink is created for "/opt/engintron/engintron.sh" to "/usr/local/sbin/engintron". This means that you no longer have to specify "/engintron.sh" before running any CLI command as "engintron" is available as a system-wide command (=anywhere) in your terminal. Upon upgrading to Engintron v2.0, the "/engintron.sh" file is removed from your system and of course the old location of Engintron's supporting files is also removed.
-* Bundled the latest release of MySQL Tuner (v1.8.5) so you can easily run database diagnostics from within Engintron's WHM app.
-* Bundled the latest Tuning Primer script for database diagnostics. This option will work via the terminal only. Run "engintron -h" to see all available CLI options.
+* Bundled the latest release of [MySQL Tuner](https://github.com/major/MySQLTuner-perl) (v1.8.5) so you can easily run database diagnostics from within Engintron's WHM app.
+* Bundled the latest [Tuning Primer](https://github.com/BMDan/tuning-primer.sh) script for database diagnostics. This option will work via the terminal only. Run "engintron -h" to see all available CLI options.
 * Updated APCu and Memcached installers to support PHP 5.6, 7.x and 8.x. Since cPanel now builds PHP modules for Memcached, the PECL installer has been dropped in favor of these packages.
 * Updated Engintron's EasyApache4 profiles to support up to EL8 variants.
 
