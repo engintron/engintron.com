@@ -13,7 +13,7 @@ $ cd /etc/yum.repos.d && wget https://repo.codeit.guru/codeit.el`rpm -q --qf "%{
 
 Then re-install Engintron from its WHM app or simply execute this as root from a terminal:
 ```
-$ /engintron.sh update
+$ engintron.sh update
 ```
 
 You should now have HTTP/2 ALPN support enabled on your CentOS 6 server.
