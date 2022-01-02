@@ -9,9 +9,9 @@
 * Improved CLI commands
 * Apache 2.2 is no longer supported as it's really old and cPanel has dropped support for it for some time now. Likewise, the installer for Apache's RPAF module is now removed.
 * New simplified one-liner for installing/updating Engintron: `curl -sSL https://raw.githubusercontent.com/engintron/engintron/master/engintron.sh | bash -s -- install` (a wget version is also available on the project's GitHub repo). You can run the install/update command anywhere in your terminal (you don't have to "cd" to the server's / directory anymore).
-* Engintron's files are now installed under `/opt/engintron` (by following the FHS standard for 3rd party apps) and a symlink is created for `/opt/engintron/engintron.sh` to `/usr/local/sbin/engintron`. This means that you no longer have to specify `/engintron.sh` before running any CLI command as `engintron` is available as a system-wide command (=anywhere) in your terminal. Upon upgrading to Engintron v2.0, the `/engintron.sh` file is removed from your system and of course the old location of Engintron's supporting files is also removed.
+* Engintron's files are now installed under "/opt/engintron" (by following the FHS standard for 3rd party apps) and a symlink is created for "/opt/engintron/engintron.sh" to "/usr/local/sbin/engintron". This means that you no longer have to specify "/engintron.sh" before running any CLI command as "engintron" is available as a system-wide command (=anywhere) in your terminal. Upon upgrading to Engintron v2.0, the "/engintron.sh" file is removed from your system and of course the old location of Engintron's supporting files is also removed.
 * Bundled the latest release of MySQL Tuner (v1.8.5) so you can easily run database diagnostics from within Engintron's WHM app.
-* Bundled the latest Tuning Primer script for database diagnostics. This option will work via the terminal only. Run `engintron -h` to see all available CLI options.
+* Bundled the latest Tuning Primer script for database diagnostics. This option will work via the terminal only. Run "engintron -h" to see all available CLI options.
 * Updated APCu and Memcached installers to support PHP 5.6, 7.x and 8.x. Since cPanel now builds PHP modules for Memcached, the PECL installer has been dropped in favor of these packages.
 * Updated Engintron's EasyApache4 profiles to support up to EL8 variants.
 
@@ -20,7 +20,7 @@ We recommend you update to v2.0 from the terminal by executing the new one-line 
 
 Additionally, for the curious eye, you'll notice code that mentions Ubuntu. This is not by accident of course. cPanel is already working on adding full Ubuntu support soon, so Engintron includes some preliminary work for Ubuntu as well. Once cPanel is officially released to support Ubuntu, Engintron will also be updated to support Ubuntu as well (which by the way is our favorite server OS).
 
-Existing documentation will be updated in the coming days. Just keep in mind that wherever you see a `/engintron.sh` reference in the docs, you should replace it with just `engintron` for now.
+Existing documentation will be updated in the coming days. Just keep in mind that wherever you see a "/engintron.sh" reference in the docs, you should replace it with just "engintron" for now.
 
 ### September 8th, 2021 - v1.16.0
 * Added extra data sanitisation for the Engintron WHM app - thank you Jamie Slome from [huntr.dev](https://huntr.dev)
