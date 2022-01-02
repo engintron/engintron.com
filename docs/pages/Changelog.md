@@ -15,6 +15,9 @@
 * Updated APCu and Memcached installers to support PHP 5.6, 7.x and 8.x. Since cPanel now builds PHP modules for Memcached, the PECL installer has been dropped in favor of these packages.
 * Updated Engintron's EasyApache4 profiles to support up to EL8 variants.
 
+**IMPORTANT**
+We recommend you update to v2.0 from the terminal by executing the new one-line installer. Upgrading from within WHM is possible of course but not as elegant, because we cleanup old files. So there is a chance that you get an error page, in which case you just need to hit the back button so v2.0 is reloaded in your browser. This suggestion is only for upgrading from v1.x to v2.0. Once v2.1 is out, you'll be able to upgrade from within WHM without any "hiccups"... :)
+
 Additionally, for the curious eye, you'll notice code that mentions Ubuntu. This is not by accident of course. cPanel is already working on adding full Ubuntu support soon, so Engintron includes some preliminary work for Ubuntu as well. Once cPanel is officially released to support Ubuntu, Engintron will also be updated to support Ubuntu as well (which by the way is our favorite server OS).
 
 Existing documentation will be updated in the coming days. Just keep in mind that wherever you see a `/engintron.sh` reference in the docs, you should replace it with just `engintron` for now.
