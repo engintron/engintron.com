@@ -13,4 +13,4 @@
 ### Engintron History
 
 * Old Engintron WHM app mockup
-![Engintron v2](./images/2.0.0_mockup.png)
+![Engintron v2](./images/old_v2_mockup.png)

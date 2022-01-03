@@ -65,7 +65,7 @@ $ engintron -h
 
 ### INTEGRATION WITH MUNIN
 
-![Nginx on Munin](./images/1.6.0_nginx_on_munin.png)
+![Nginx on Munin](./images/nginx_on_munin.png)
 If your cPanel server has Munin (the most popular system monitoring software) installed, then when you install Engintron, it will also enable graphs inside Munin for Nginx as well, so you can monitor traffic and overall usage for it.
 
 
