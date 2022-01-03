@@ -13,7 +13,11 @@ Additionally, once cPanel is officially released to also support Ubuntu (in the 
 
 ### Installing Engintron for the first time
 
-Installation is a process that lasts only a few minutes. You'll need root SSH access to your cPanel server. Also check the current requirements (listed lower). If everything is ok, log in as root and type (or copy/paste) the following command:
+Installation is a process that lasts only a few minutes.
+
+You'll need root SSH access to your cPanel server.
+
+If everything is ok, log in as root and type the following command:
 
 ```
 curl -sSL https://raw.githubusercontent.com/engintron/engintron/master/engintron.sh | bash -s -- install
@@ -25,20 +29,18 @@ If cURL is not available on your system, you can use wget like so:
 wget --no-check-certificate -O - https://raw.githubusercontent.com/engintron/engintron/master/engintron.sh | bash -s -- install
 ```
 
-The process will take a couple of minutes to complete and after that, Engintron will be installed on your cPanel server. Engintron has a nice user interface which is activated inside WHM, under the Plugins section. After installation, refresh WHM in your browser and you should see Engintron in the Plugins section (it's the absolute last section in WHM's sidebar).
+The process will take a couple of minutes to complete and after that, Engintron will be installed on your cPanel server. Engintron has a nice & simple user interface which is activated inside WHM, under the Plugins section. After installation, refresh WHM in your browser and you should see Engintron in the Plugins section (it's the absolute last section in WHM's sidebar).
 
 In there, you'll find basic options to control Nginx, Apache and MySQL, all in one convenient place. Additionally, you can edit all of Nginx's configuration files (as well as some from Apache & MySQL) to get even more from Engintron (e.g. configure Engintron for use with CloudFlare). If however all you want is to accelerate both static & dynamic content delivery, then Engintron is already setup for you and you don't need to do anything more.
 
-Inside the Engintron app dashboard you'll also find some handy utilities to monitor things like your Nginx access & error logs, check processes on your server or see incoming traffic on ports 80/443.
+Inside the Engintron app dashboard you'll also find some handy small utilities that make managing your server more productive.
 
 
 ### Update (or re-install) Engintron
 
 To re-install or update Engintron, either use Enginton's WHM app (there's a link to update/re-install Engintron) or if you prefer the terminal simply follow the same process as described in the installation section above.
 
-HOWEVER, if you have customized any of the 5 main Nginx configuration files (nginx.conf, the 3 proxy\_params\_* files, default.conf), please back up your changes, so you can paste them back after the update. As of version 1.6.2, "custom\_rules" is not changed on subsequent updates in order to maintain your custom Nginx configuration options like for example rules for CloudFlare. Engintron will always override the 5 configuration files mentioned earlier upon re-installation or update to ensure things always work as expected.
-
-If for some reason you forget to do this, we got your back (shit can happen, right?). Login as root and navigate to Nginx's files to retrieve the backups of the configuration files which are automatically created when you re-install/update Engintron:
+HOWEVER, if you have customized any of the 5 main Nginx configuration files (nginx.conf, the 3 proxy\_params\_* files & default.conf), then these these configuration files will be overwritten but they are backed up first by being renamed with .bak file extension. To view these files over terminal you can do:
 
 ```
 $ cd /etc/nginx
@@ -51,4 +53,4 @@ $ cat conf.d/default.conf.bak
 
 This way you can view your previous changes so you can copy them to the new configuration files installed.
 
-**We HIGHLY recommend** that any customizations to Nginx's configuration are only performed inside the custom\_rules file. When you update Engintron, we can show you a copy of your previous "custom\_rules" file so you can copy/paste or adapt any of your custom Nginx rules to the new release's "custom\_rules" file.
+However **we HIGHLY recommend** that any customizations to Nginx's configuration are only performed inside the custom\_rules file. 99,999% of the times your modifications can go there.
