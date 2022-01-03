@@ -13,7 +13,6 @@
 * ADDITIONAL INFO, SETUP & GOTCHAS
     * [About Engintron's micro caching features](pages/About-Engintrons-micro-caching-features)
     * [Cron job to purge Nginx cache & temp files](pages/Cron-job-to-purge-Nginx-cache-&-temp-files)
-    * [Enable IPv6 support in Nginx (for IPv6 capable servers)](pages/Enable-IPv6-support-in-Nginx)
     * [Engintron & (under development) domains that don't yet resolve (point) to your cPanel server](pages/Engintron-and-under-development-domains-that-dont-yet-resolve-point-to-your-cPanel-server)
     * [Engintron & CloudFlare](pages/Engintron-&-CloudFlare)
     * [Engintron & the "Custom Rules" file (for Nginx)](pages/Engintron-&-the-%22Custom-Rules%22-file-(for-Nginx))
