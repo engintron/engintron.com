@@ -1,6 +1,6 @@
 ## How to log real visitor IP when using Engintron on cPanel/WHM
 
-![How to log real visitor IP when using Engintron on cPanel/WHM](./images/screenshots/how-to-log-real-visitor-ip-when-using-engintron-on-cpanel.png)
+![How to log real visitor IP when using Engintron on cPanel/WHM](./images/how-to-log-real-visitor-ip-when-using-engintron-on-cpanel.png)
 
 Engintron user Damchey wrote a blog post on how to log real visitor IP when using Engintron on cPanel/WHM.
 

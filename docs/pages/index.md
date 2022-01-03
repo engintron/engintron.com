@@ -1,6 +1,6 @@
 ## Welcome to the documentation portal for Engintron
 
-![Engintron_v2_20220103_2048x1072](./images/screenshots/Engintron_v2_20220103_Retro_IBM_Desktop_1920x1200.jpg)
+![Engintron_v2_20220103_2048x1072](./images/Engintron_v2_20220103_Retro_IBM_Desktop_1920x1200.jpg)
 
 First time user of Engintron? Have a look at the docs organized in sections on your left.
 
