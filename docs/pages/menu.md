@@ -3,23 +3,13 @@
 * [START](pages/index)
 * UPDATES
     * [Changelog](pages/Changelog)
-* MUST READ
-    * [Requirements](pages/Requirements)
 * GENERAL
-    * [Preface](pages/01.-Preface)
-    * [Installation (and updates)](pages/02.-Installation-(and-updates))
-    * [Uninstalling](pages/03.-Uninstalling)
-    * [Using Engintron](pages/04.-Using-Engintron)
-    * [Why is Engintron a better solution compared to other Nginx (or performance related) plugins for cPanel](pages/05.-Why-is-Engintron-a-better-solution-compared-to-other-Nginx-installers-for-cPanel)
-    * [FAQ](pages/FAQ)
-    * [Engintron Roadmap](pages/Engintron-Roadmap)
-* TROUBLESHOOTING
-    * ["Welcome to Nginx on Fedora" showing on all sites after upgrading Engintron or cPanel (aka Nginx from EPEL repo issue)](pages/%22Welcome-to-Nginx-on-Fedora%22-showing-on-all-sites-after-upgrading-Engintron-or-cPanel-(aka-Nginx-from-EPEL-repo-issue))
-    * [Check if visitor IPs are properly logged in Apache after installing Engintron](pages/Check-if-visitor-IPs-are-properly-logged-in-Apache-after-installing-Engintron)
-    * [How to uninstall other Nginx plugins for cPanel (before installing Engintron)](pages/How-to-uninstall-other-Nginx-plugins-for-cPanel-(before-installing-Engintron))
-    * [Fix "localhost could not be resolved" entries in your Nginx log files](pages/Fix-%22localhost-could-not-be-resolved%22-entries-in-your-Nginx-log-files)
-    * [Fix "110: Connection timed out" errors appearing in Nginx logs](pages/Fix-%22110-Connection-timed-out%22-errors-appearing-in-Nginx-logs)
-    * [SSL certificate changes not visible in Nginx? Here's a possible explanation & solution](pages/SSL-certificate-changes-not-visible-in-Nginx%3F-Here-s-a-possible-explanation-&-solution)
+    * [Installation (and updating)](pages/install)
+    * [Uninstalling](pages/remove)
+    * [Using Engintron](pages/using-engintron)
+    * [FAQ](pages/faq)
+    * [Troubleshooting Guide](pages/troubleshooting)
+    * [Roadmap](pages/roadmap)
 * ADDITIONAL INFO, SETUP & GOTCHAS
     * [About Engintron's micro caching features](pages/About-Engintrons-micro-caching-features)
     * [Engintron & the "Custom Rules" file (for Nginx)](pages/Engintron-&-the-%22Custom-Rules%22-file-(for-Nginx))
@@ -41,8 +31,8 @@
     * [Optimizing CentOS](pages/Beyond-Engintron-Optimizing-CentOS)
 * EXTENDING ENGINTRON
     * [Hosting Node apps on cPanel with the help of Engintron](pages/hosting-node-apps-on-cpanel)
-    * [3rd-party software for Engintron](pages/3rd-party-software-for-Engintron)
+    * [3rd-party software for Engintron](pages/third-party-software-for-engintron)
 * USER CONTRIBUTED GUIDES
-    * [CentOS 6 and HTTP 2 ALPN support](pages/CentOS-6-and-HTTP-2-ALPN-support)
-    * [Offload HTTPS traffic to Nginx only](pages/Offload-HTTPS-traffic-to-Nginx-only)
-    * [How to log real visitor IP when using Engintron on cPanel/WHM](pages/how-to-log-real-visitor-ip-when-using-engintron-on-cpanel)
+    * [CentOS 6 and HTTP 2 ALPN support](pages/user_guide_centos6_http2_alpn)
+    * [How to log real visitor IP when using Engintron on cPanel/WHM](pages/user_guide_log_real_visitor_ips)
+    * [Offload HTTPS traffic to Nginx only](pages/user_guide_offload_https_nginx_only)

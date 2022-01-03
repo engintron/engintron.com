@@ -1,6 +1,6 @@
 ## Changelog
 
-***To update to a newer version of Engintron, [please have a look here](pages/02.-Installation-(and-updates)).***
+***To update to a newer version of Engintron, [please have a look here](pages/install).***
 
 ### January 2nd, 2022 - v2.0
 * Brand new series released!
