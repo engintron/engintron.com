@@ -1,20 +1,24 @@
 ## Optimizing MySQL/MariaDB
 
-cPanel ships with MySQL (or MariaDB) un-optimized by default. This is not to ensure compatibility, it's just a process that requires some manual intervention, which is out of the scope of let-cPanel-do-everything that cPanel follows :)
+cPanel ships with a failry basic configuration for MySQL or MariaDB.
 
-If you use Engintron, you'll notice there's an option to directly edit the database's main configuration file called "my.cnf". If you don't use Engintron (really?), then simply edit that file (it's located under /etc/my.cnf) using "nano" or an SFTP connection to the root directory of your server, so you can download, edit and then re-upload this file.
+This configuration simply does not scale, nor is it suitable for all servers.
 
-Let's assume you use Engintron (the easy way).
+90% of the times, the database will be your server's performance bottleneck.
 
-In Engintron's WHM app click on "Edit my.cnf". Copy the contents of the editor (your current my.cnf configuration) in a text file in case you need to revert back.
+If you use Engintron, you'll notice there's an option to directly edit the database's main configuration file (located in /etc/my.cnf).
 
-Next copy the optimized database configuration which you can find here: [https://gist.github.com/fevangelou/0da9941e67a9c9bb2596](https://gist.github.com/fevangelou/0da9941e67a9c9bb2596)
+Backup your current my.cnf configuration as its displayed there in some text file, in case you need to revert back.
+
+Next copy the optimized database configuration which we are maintaining here:
+
+[https://gist.github.com/fevangelou/0da9941e67a9c9bb2596](https://gist.github.com/fevangelou/0da9941e67a9c9bb2596)
 
 Now paste that into the editor window in Engintron's WHM app.
 
-Depending on your CPU count and RAM, adapt the configuration based on the comments it has next to each value. If there is no comment beside a value, you don't need to change it.
+Depending on your CPU count and RAM, adapt the configuration based on the comments it has next to each value. If there is no comment beside a value, you most likely don't need to change it at all.
 
-Once you're ready, save your edits and check the box to restart the database. After that, the new configuration will now be applied.
+Once you're ready, save your edits and the new configuration will now be applied (after a few seconds).
 
 Now, check your sites. They should work. If they don't, you'll have to check the database error log located at /var/lib/mysql/mysql\_error.log
 
