@@ -1,5 +1,7 @@
 ## Welcome to the documentation portal for Engintron
 
+![Engintron_v2_20220103_2048x1072](./images/screenshots/Engintron_v2_20220103_Retro_IBM_Desktop_1920x1200.jpg)
+
 First time user of Engintron? Have a look at the docs organized in sections on your left.
 
 Besides the basic how-to's, you'll also find some handy guides on optimizing your cPanel based servers, as well as 3rd party guides and integrations.
