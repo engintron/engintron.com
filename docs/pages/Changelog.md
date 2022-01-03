@@ -16,7 +16,7 @@
 * Updated Engintron's EasyApache4 profiles to support up to EL8 variants.
 
 **IMPORTANT**
-We recommend you update to v2.0 from the terminal by executing the new one-line installer. Upgrading from within WHM is possible of course but not as elegant, because we cleanup old files. So there is a chance that you get an error page, in which case you just need to hit the back button so v2.0 is reloaded in your browser. This suggestion is only for upgrading from v1.x to v2.0. Once v2.1 is out, you'll be able to upgrade from within WHM without any "hiccups"... :)
+When upgrading Engintron from within WHM there is a small chance that you'll get a page loading error, in which case you just need to hit the back button and reload the page in your browser. This "hiccup" may occur ONLY when upgrading Engintron from v1.x to v2.0 specifically. Upgrades in the 2.x series will be flawless as in the past.
 
 Additionally, for the curious eye, you'll notice code that mentions Ubuntu. This is not by accident of course. cPanel is already working on adding full Ubuntu support soon, so Engintron includes some preliminary work for Ubuntu as well. Once cPanel is officially released to support Ubuntu, Engintron will also be updated to support Ubuntu as well (which by the way is our favorite server OS).
 
