@@ -1,25 +1,28 @@
 ## Optimizing Apache
 
-The default Apache configuration that ships with cPanel is probably too restrictive. We can adjust Apache's basic configuration settings to improve both speed and CPU/RAM usage.
+The default Apache configuration that ships with cPanel is probably too restrictive.
 
-First things first though...
-
-Make sure you are using Apache 2.4. It's way better and faster than Apache 2.2. You'll have to rebuild your server to do this via EasyApache.
-
-After you rebuild Apache, you can have a look at Linode's knowledge base as a starting point [https://www.linode.com/docs/websites/apache-tips-and-tricks/tuning-your-apache-server](https://www.linode.com/docs/websites/apache-tips-and-tricks/tuning-your-apache-server) or better still, try using ApacheBuddy to get insights on your existing configuration: [https://github.com/gusmaskowitz/apachebuddy.pl](https://github.com/gusmaskowitz/apachebuddy.pl)
-
-To give you an idea, this is a good starting point (for most servers):
-
-```
-StartServers        5
-MinSpareServers     5
-MaxSpareServers     10
-ServerLimit         500
-MaxRequestWorkers   500 (this option was previously called MaxClients in Apache v2.2)
-MaxRequestsPerChild 4000
-Timeout             300
-```
-
-Especially the "Timeout" setting, can be lowered to say 120 or 60 (seconds) and make a huge difference in terms of CPU/RAM load.
+We can adjust Apache's basic configuration settings to improve both speed and CPU/RAM usage.
 
 In WHM, these Apache directives can be configured under "Service Configuration" >> "Apache Configuration" >> "Global Configuration".
+
+If your server has for example 8 CPU cores, follow this pattern:
+
+```
+StartServers        8     # Same as your CPU core count, no less than 5 though
+
+MinSpareServers     8     # Same as your CPU core count, no less than 5 though
+
+MaxSpareServers     16    # Double as your CPU core count, no less than 10 though
+
+ServerLimit         500   # 500 is a good base point for an average 4-8 CPU core system with 8-16 GBs of RAM
+                          # If your server has higher specs, you can increase up to 800-1000,
+                          # anything beyond that is probably overkill
+
+MaxRequestWorkers   500   # Same as "ServerLimit"
+
+MaxRequestsPerChild 5000  # 10 times "ServerLimit"
+
+Timeout             300   # Stick to the default value that comes with cPanel, there is no reason to lower this value.
+                          # If you also have Engintron installed, Nginx's timeout is also at 300 sec to align with this setting in Apache.
+```

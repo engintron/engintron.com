@@ -15,7 +15,7 @@ ul, ol {margin:0 0 0 16px;padding:4px;}
     li {padding:2px 4px;margin:0;}
     li a {display:block;}
 code {background-color:#f5f7f9;overflow:auto;width:98%;display:block;white-space:nowrap;padding:10px;}
-pre > code {font-family:'Source Sans Pro',sans-serif;background-color:#f5f7f9;border-radius:4px;padding:10px;white-space:pre-wrap;}
+pre > code {font-family:monospace;background-color:#f5f7f9;border-radius:4px;padding:10px;white-space:pre-wrap;}
 .content li a {display:inline;}
 
 /* Structure */
