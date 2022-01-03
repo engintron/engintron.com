@@ -106,7 +106,7 @@ See how the port is overridden and the protocol enforced internally to HTTP only
 ### May 22nd, 2018 - v1.8.11
 * Updated WooCommerce exclusions (cookies and paths) so expect even better performance & behaviour with WordPress/WooCommerce sites. If you host exclusively WordPress sites, you can now safely increase "proxy\_cache\_valid" in /etc/nginx/proxy\_params\_dynamic from "1s" (1 second - aka micro-caching) to minutes (e.g. "3m"). If you do this, Nginx can serve dynamic content entirely from its cache for content that CAN be cached, so expect a MAJOR boost in performance. You're welcome :)
 * Main Nginx configuration has been updated for improved performance for busy sites/servers.
-* Added installer for Memcached in cPanel with EA4. WordPress, Joomla and other CMSs/apps that can utilize Memcached will see significant performance improvements. Installation instructions can be found here: [pages/Install-Memcached-in-cPanel-(EasyApache-4-only)](pages/Install-Memcached-in-cPanel-(EasyApache-4-only))
+* Added installer for Memcached in cPanel with EA4. WordPress, Joomla and other CMSs/apps that can utilize Memcached will see significant performance improvements. Installation instructions can be found here: [pages/optimization-guide-install-memcached](pages/optimization-guide-install-memcached)
 * Disabled any type of caching for cPanel specific subdomains (e.g. webmail.domain.tld, cpanel.domain.tld etc.).
 
 ### Apr 27th, 2018 - v1.8.10
@@ -126,7 +126,7 @@ See how the port is overridden and the protocol enforced internally to HTTP only
 
 ### Mar 16th, 2018 - v1.8.8
 * Resolved a potential security issue in which resellers with access to Engintron's WHM app could view (but not edit) any system file on the server, by manipulating the edit view URL in Engintron's WHM app. Issue originally referenced here: [https://github.com/engintron/engintron/issues/768](https://github.com/engintron/engintron/issues/768)
-* Added APCu setup support for PHP 7.2 and fixed an issue (in recent cPanel releases) where *pecl.ini files would attempt to load the APCu binaries and thus generate an error\_log at the root of your cPanel server. For installing APCu on your server, refer to [this wiki entry](pages/Beyond-Engintron-Install-APC(u)-in-cPanel).
+* Added APCu setup support for PHP 7.2 and fixed an issue (in recent cPanel releases) where *pecl.ini files would attempt to load the APCu binaries and thus generate an error\_log at the root of your cPanel server. For installing APCu on your server, refer to [this wiki entry](pages/optimization-guide-install-apcu).
 * Updated IPv6 syntax in Nginx configuration files. IPv6 is still not enabled by default as in systems without native IPv6 networking enabled, Nginx will fail to compile its configuration files and thus stop serving websites.
 
 ### Nov 21st, 2017 - v1.8.7

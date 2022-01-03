@@ -1,4 +1,4 @@
-## cPanel WHM initial optimal setup
+## Initial WHM setup
 
 Engintron will make your cPanel based server fly, but it's important to have cPanel/WHM properly configured already.
 

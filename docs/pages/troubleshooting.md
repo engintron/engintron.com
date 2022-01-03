@@ -122,7 +122,7 @@ proxy_send_timeout            180s;
 
 Then save and restart Apache/Nginx.
 
-b) The better but harder way is to optimize your slow backend. This can be done by tuning the configuration files for Apache, MySQL, PHP and even the system itself. Have a look at the [Optimization Guides](https://engintron.com/docs/#/pages/Beyond-Engintron-cPanel-WHM-initial-optimal-setup) for a great starting point.
+b) The better but harder way is to optimize your slow backend. This can be done by tuning the configuration files for Apache, MySQL, PHP and even the system itself. Have a look at the [Optimization Guides](https://engintron.com/docs/#/pages/optimization-guide-initial-whm-setup) for a great starting point.
 
 
 ### SSL certificate changes not visible in Nginx? Here's a possible explanation & solution
