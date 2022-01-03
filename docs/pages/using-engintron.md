@@ -2,16 +2,12 @@
 
 ![Engintron Backend](./images/20220101_engintron_v2.0_s1.png)
 
-### PREFACE FOR v1.5 OR NEWER
-
-Unlike version 1.0.x of Engintron, the new 1.5.x version (or greater) uses a different approach for proxying and caching, which now makes Engintron a perfect fit for any cPanel server - operated by freelancers, agencies or even large hosting companies. Engintron will now cache both static assets and dynamic HTML content, by using the micro-caching concept for the latter to significantly boost a site's performance, even if it has user generated content that should not be cached. Micro-caching is perfect for sites with user-generated content like forums, e-shops etc. as it maintains the benefits of caching without altering the user experience.
-
-By using a different proxying & caching strategy altogether, the previous use of vhost synchronization between Apache and Nginx is now unnecessary. You essentially set and forget Engintron. New domains added in cPanel will work just fine with Nginx and without restarting any service.
+Engintron caches both static assets and dynamic HTML content, by using the micro-caching concept for the latter to significantly boost a site's performance, even if it has user generated content that should not be cached. Micro-caching is perfect for sites with user-generated content like forums, e-shops etc. as it maintains the benefits of caching without altering the user experience.
 
 
 ### WHAT MAKES ENGINTRON SPECIAL
 
-It's really the accumulated knowledge from years of deploying and managing high traffic websites around the globe. We're talking about websites that measure in the dozens of millions of page views per month, receiving traffic from millions of visitors per month. Beyond that, we're also software developers. We have built & maintain the awesome award-winning K2 extension for Joomla (downloaded more than 3 million times at the time of writing - [getk2.org](https://getk2.org)), precisely because we needed to bypass the performance & content limitations in the CMS, using our knowledge on high performance deployments. The vast community of users who have used K2 so far has brought in an enormous wealth of information on all matters related to high performance. That is also the reason why the constant improvements to K2 have made it the de-facto content extension to use in Joomla for high traffic deployments. It's no wonder that companies like MTV, Nickelodeon, Carrefour, Jaguar or Groupama, organizations like Amnesty International or Actionaid, institutions like the Harvard University or public organizations like the Governments of Brazil, Italy and many more across the world that choose to use Joomla, also choose to have K2 installed.
+It's really the accumulated knowledge from years of deploying and managing high traffic websites around the globe. We're talking about websites that measure in the dozens of millions of page views per month, receiving traffic from millions of visitors per month. Beyond that, we're also software developers. We have built & maintain the awesome award-winning K2 extension for Joomla (downloaded more than 4 million times at the time of writing - [getk2.org](https://getk2.org)), precisely because we needed to bypass the performance & content limitations in the CMS, using our knowledge on high performance deployments. The vast community of users who have used K2 so far has brought in an enormous wealth of information on all matters related to high performance. That is also the reason why the constant improvements to K2 have made it the de-facto content extension to use in Joomla for high traffic deployments. It's no wonder that companies like MTV, Nickelodeon, Carrefour, Jaguar or Groupama, organizations like Amnesty International or Actionaid, institutions like the Harvard University or public organizations like the Governments of Brazil, Italy and many more across the world that choose to use Joomla, also choose to have K2 installed.
 
 All this knowledge, both from our sysadmin experience as well as our software development expertise, have been the driving force behind Engintron. And it's our pleasure to be able to provide it to any cPanel user for free :)
 
@@ -51,10 +47,10 @@ $ engintron -h
 
 Besides the Engintron specific functionality (install, remove, enable/disable, clean the Nginx cache) you'll also find some handy utilities for when using the terminal to work on your server.
 
- 
+
 ### DAY TO DAY TASKS
 
-After you install Engintron, you will notice it has enabled its own app dashboard in WHM, under the Plugins section. From now on you can fully operate Engintron & Nginx related tasks entirely from the Engintron app dashboard. And we have included controls for Apache, PHP & MySQL as well. The most important configuration files from these services can be directly edited via Engintron's app dashboard and you can even control the status of the 3 main services (Nginx, Apache, MySQL).
+After you install Engintron, you will notice it has enabled its own app dashboard in WHM, under the Plugins section. From now on you can fully operate Engintron & Nginx related tasks entirely from the Engintron app dashboard. And we have included controls for Apache, PHP & the database as well. The most important configuration files from these services can be directly edited via Engintron's app dashboard and you can even control the status of the 3 main services (Nginx, Apache, MySQL/MariaDB).
 
 You can also check Nginx's main logs (access and error) and we have bundled a few tiny tools for common day-to-day sysadmin tasks, e.g. resource or HTTP traffic monitoring.
 
