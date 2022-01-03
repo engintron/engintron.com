@@ -25,8 +25,8 @@
     * [Install APCu in cPanel](pages/optimization-guide-install-apcu)
     * [Install Memcached in cPanel](pages/optimization-guide-install-memcached)
     * [Optimizing Apache](pages/optimization-guide-apache)
-    * [Optimizing CentOS](pages/optimization-guide-os)
     * [Optimizing MySQL/MariaDB](pages/optimization-guide-database)
+    * [Optimizing the system](pages/optimization-guide-os)
 * EXTENDING ENGINTRON
     * [Hosting Node apps on cPanel with the help of Engintron](pages/hosting-node-apps-on-cpanel)
     * [3rd-party software for Engintron](pages/third-party-software-for-engintron)
