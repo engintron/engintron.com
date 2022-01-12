@@ -22,7 +22,7 @@ pre > code {font-family:monospace;background-color:#f5f7f9;border-radius:4px;pad
 .gridContainer {display:grid;grid-template-columns:1fr;grid-template-rows:142px calc(100vh - 190px) 48px;}
     .header {background:#744cbc url(../images/hero.jpg) 0 50% repeat-x;background-size:cover;background-blend-mode:multiply;border-bottom:1px solid #d4dadf;text-align:center;display:grid;grid-template-rows:1fr;grid-template-columns:1fr;}
         .header h1 {align-self:center;}
-            .header h1 a {font-family:'Source Sans Pro',sans-serif;font-size:40px;font-weight:400;color:#f8f8f8;padding:20px 0 28px 324px;background:url(../../../../images/logo.png) 0 50% no-repeat;}
+            .header h1 a {font-family:'Source Sans Pro',sans-serif;font-size:40px;font-weight:400;color:#f8f8f8;padding:20px 0 28px 324px;background:url(../../../../images/logo/v1.1/engintron_logo_v1.1_310x110_8.png) 0 50% no-repeat;}
             .header h1 a span {font-weight:700;margin-right:8px;font-size:44px;display:none;}
             .header h1 a:hover {text-decoration:none;}
     .page {display:grid;grid-template-columns:1fr 2fr 4fr 1fr;border-top:1px solid #f5f6f7;}
