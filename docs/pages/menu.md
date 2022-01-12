@@ -11,6 +11,8 @@
     * [Troubleshooting Guide](pages/troubleshooting)
     * [Roadmap](pages/roadmap)
 * ADDITIONAL INFO, SETUP & GOTCHAS
+    * [10 reasons why](pages/ten-reasons-why)
+    * [Engintron vs. cPanel Nginx](pages/engintron-vs-cpanel-nginx)
     * [About Engintron's micro caching features](pages/About-Engintrons-micro-caching-features)
     * [Cron job to purge Nginx cache & temp files](pages/Cron-job-to-purge-Nginx-cache-&-temp-files)
     * [Engintron & (under development) domains that don't yet resolve (point) to your cPanel server](pages/Engintron-and-under-development-domains-that-dont-yet-resolve-point-to-your-cPanel-server)
