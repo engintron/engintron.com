@@ -1,7 +1,8 @@
-## 10 Reasons Why
+## 10 reasons why
 
 ### Why is Engintron a better solution compared to other Nginx (or performance related) plugins for cPanel
-There are 10 key differences when comparing Engintron with other Nginx installers for cPanel.
+
+There are 10 key differences when comparing Engintron with other Nginx (or performance related) plugins for cPanel.
 
 First and foremost, caching actually works with Engintron. It works as it should and it works universally. You install it and ALL your cPanel websites will get accelerated, even the slowest ones. Not only that, your serving capacity will increase tremendously. Simple Apache Benchmark (ab) tests reveal a phenomenal increase in concurrent requests served per second, from just 3-300 in Apache to 15,000-20,000 or even more using Nginx via Engintron. It's our carefully crafted Nginx proxy configuration that does all the magic. And it requires literally almost zero maintenance.
 

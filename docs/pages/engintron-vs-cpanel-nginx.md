@@ -1,6 +1,7 @@
 ## Engintron vs. cPanel Nginx
 
 ### Not so fast buddy... cPanel officially added support for Nginx in 2021. Why should I use Engintron?
+
 cPanel indeed added support for Nginx back in 2021. In fact, they integrate Nginx in 2 ways: as a proxy (like Engintron) and as a direct replacement for Apache.
 
 Engintron is different for 3 + 1 reasons really:
