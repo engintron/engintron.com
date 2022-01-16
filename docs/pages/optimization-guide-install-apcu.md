@@ -2,7 +2,7 @@
 
 APCu is an in-memory key-value store for PHP. Keys are of type string and values can be any PHP variables.
 
-APCu can be used by popular CMSs like Joomla, WordPress, Drupal etc. to save cached pages in RAM, which is much faster that writing/reading cached pages to/from disk.
+APCu can be utilized by popular CMSs like Joomla, WordPress, Drupal etc. to save cached pages in RAM, which is much faster that writing/reading cached pages to/from disk.
 
 To install APCu for PHP 5.6 up to 8.1 (where supported), follow this process:
 

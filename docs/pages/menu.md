@@ -26,6 +26,7 @@
     * [Initial WHM setup](pages/optimization-guide-initial-whm-setup)
     * [Install APCu in cPanel](pages/optimization-guide-install-apcu)
     * [Install Memcached in cPanel](pages/optimization-guide-install-memcached)
+    * [Install Redis in cPanel](pages/optimization-guide-install-redis)
     * [Optimizing Apache](pages/optimization-guide-apache)
     * [Optimizing MySQL/MariaDB](pages/optimization-guide-database)
     * [Optimizing the system](pages/optimization-guide-os)

@@ -2,6 +2,12 @@
 
 ***To update to a newer version of Engintron, [please have a look here](pages/install).***
 
+### January 17th, 2022 - v2.0 (Build 20220117)
+* New! Added a Redis installer for cPanel.
+* Updated all documents in this site to better reflect the current Engintron version.
+
+Since this is an addition beyond Engintron, the version remains the same but the build is updated as it reflects everything the Engintron package contains, so you will not see this as an update in the Engintron dashboard in WHM. If you perform a manual update there (or via terminal), the new Redis installer will be added to your system.
+
 ### January 2nd, 2022 - v2.0
 * Brand new series released!
 * Adds support for Enterprise Linux (EL) version 8 variants such as AlmaLinux 8, Rocky Linux 8 and CentOS 8 (the latter is EOL already but some folks may still use it). Although not tested, it should work on Oracle Linux 8 and Amazon Linux 2022.
