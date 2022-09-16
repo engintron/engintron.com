@@ -2,6 +2,11 @@
 
 ***To update to a newer version of Engintron, [please have a look here](pages/install).***
 
+### September 16th, 2022 - v2.1 (Build 20220916)
+This is a security release, so you are advised to upgrade as soon as possible.
+
+In this update, Engintron's UI in WHM ensures any output of the Apache restart script is properly sanitized. Depending on your ModSecurity setup, it's possible for a third party to inject remote JavaScript code (XSS type vulnerability) when you perform any task in Engintron's UI (in WHM) that restarts Apache. That's because the related Apache restart script provided by cPanel prints a snapshot of the ModSecurity log entries.
+
 ### January 17th, 2022 - v2.0 (Build 20220117)
 * New! Added a Redis installer for cPanel. Check the relevant [Redis usage guide](pages/optimization-guide-install-redis).
 * Updated all documents in this site to better reflect the current Engintron version.
