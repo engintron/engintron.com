@@ -2,12 +2,12 @@
  * @service    Engintron Web Services
  * @author     Fotis Evangelou (https://kodeka.io)
  * @url        https://engintron.com
- * @copyright  Copyright (c) 2014 - 2022 Kodeka OÜ. All rights reserved.
+ * @copyright  Copyright (c) 2014 - 2023 Kodeka OÜ. All rights reserved.
  * @license    GNU/GPL license: https://www.gnu.org/copyleft/gpl.html
  */
 
 (function(){
-    var CURRENT_VERSION = '2.1';
+    var CURRENT_VERSION = '2.2';
     var b = document.getElementsByTagName('body')[0];
     function versionCompare(left, right) {
         if (typeof left + typeof right != 'stringstring') return false;

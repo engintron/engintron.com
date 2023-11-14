@@ -2,6 +2,13 @@
 
 ***To update to a newer version of Engintron, [please have a look here](pages/install).***
 
+### November 14th, 2023 - v2.2 (Build 20231114)
+This release updates secondary installers and third-party scripts included with Engintron.
+* Added support for PHP 8.2 in the APCu & Memcached installers (installed under /opt/engintron/installers/)
+* Updated database performance insights scripts mysqltuner.pl & tuning-primer.sh (do "engintron -h" in the terminal to see how to run these utilities)
+* Updated EA4 installation profiles to support PHP up to v8.2 & Node 16
+* Updated the healthcheck.sh utility to follow redirects (installed under /opt/engintron/utilities/)
+
 ### September 16th, 2022 - v2.1 (Build 20220916)
 This is a security release, so you are advised to upgrade as soon as possible.
 
