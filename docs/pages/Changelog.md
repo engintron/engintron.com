@@ -2,6 +2,9 @@
 
 ***To update to a newer version of Engintron, [please have a look here](pages/install).***
 
+### May 31st, 2024 - v2.3 (Build 20240531)
+This release fixes a warning ("nginx: [warn] the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/conf.d/default_https.conf...") introduced by updates in Nginx in May 2024.
+
 ### November 14th, 2023 - v2.2 (Build 20231114)
 This release updates secondary installers and third-party scripts included with Engintron.
 * Added support for PHP 8.2 in the APCu & Memcached installers (installed under /opt/engintron/installers/)
