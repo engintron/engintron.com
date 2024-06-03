@@ -1,14 +1,13 @@
 /**
- * @version     1.1
+ * @version     2.0
  * @package     SimpleDocs.js
  * @author      JoomlaWorks https://www.joomlaworks.net
- * @copyright   Copyright (c) 2006 - 2020 JoomlaWorks Ltd. All rights reserved.
+ * @copyright   Copyright (c) 2006 - 2024 JoomlaWorks Ltd. All rights reserved.
  * @license     https://www.joomlaworks.net/license
  */
 
 /*
     Requirements to load before SimpleDocs.js:
-    - jQuery 1.9.x+ (https://jquery.com/)
     - Showdown.js (http://showdownjs.com/)
 
     Basic conventions (for things to work as easy as possible):
@@ -63,40 +62,6 @@
         document.title = title;
         triggerGA(gaDomain);
     }
-
-    /*
-    // Get page
-    function getPage(page, title, container, urlstate) {
-        $.ajax({
-            url: page + '.md',
-            success: function(result) {
-                var output = converter.makeHtml(result);
-                $(container).html(output);
-                if (urlstate) {
-                    updateBrowser('#/' + page, title, output);
-                }
-                parseUrls(container);
-                $(container).scrollTop(0);
-            },
-            error: function(req, status, error) {
-                getPage('pages/404', '404 - Not found', container, true)
-            }
-        });
-    }
-
-    // Parse all .md URLs
-    function parseUrls(el) {
-        $(el + ' a[href*="pages/"]').each(function() {
-            var title = $(this).html();
-            var page = $(this).attr('href');
-            $(this).attr('href', '#/' + page);
-            $(this).on('click', function(e) {
-                e.preventDefault();
-                getPage(page, title, outputContainer, true);
-            });
-        });
-    }
-    */
 
     // Get page
     function getPage(page, title, container, urlstate) {
@@ -155,24 +120,13 @@
         }
     }
 
-    /*
-    // Bootstrap everything
-    $(document).on('ready', function() {
-        renderNav();
-        initialLoad(null, true);
-        $(window).on('popstate', function(e) {
-            //console.log(e.originalEvent);
-            //console.log(e.target.location.hash);
-            initialLoad(null, false);
-        });
-    });
-    */
-
     // Bootstrap everything
     document.addEventListener('DOMContentLoaded', function() {
         renderNav();
         initialLoad(null, true);
         window.addEventListener('popstate', function(e) {
+            //console.log(e.originalEvent);
+            //console.log(e.target.location.hash);
             initialLoad(null, false);
         });
     });
