@@ -31,7 +31,7 @@
     - Create themes
 */
 
-(function($) {
+(function() {
     // Configuration
     var outputContainer = '[data-sd-content]';
     var navContainer = '[data-sd-menu]';
@@ -64,6 +64,7 @@
         triggerGA(gaDomain);
     }
 
+    /*
     // Get page
     function getPage(page, title, container, urlstate) {
         $.ajax({
@@ -95,6 +96,39 @@
             });
         });
     }
+    */
+
+    // Get page
+    function getPage(page, title, container, urlstate) {
+        fetch(page + '.md')
+            .then(response => response.text())
+            .then(result => {
+                var output = converter.makeHtml(result);
+                document.querySelector(container).innerHTML = output;
+                if (urlstate) {
+                    updateBrowser('#/' + page, title, output);
+                }
+                parseUrls(container);
+                document.querySelector(container).scrollTop = 0;
+            })
+            .catch(error => {
+                getPage('pages/404', '404 - Not found', container, true);
+            });
+    }
+
+    // Parse all .md URLs
+    function parseUrls(el) {
+        var links = document.querySelectorAll(el + ' a[href*="pages/"]');
+        links.forEach(function(link) {
+            var title = link.innerHTML;
+            var page = link.getAttribute('href');
+            link.setAttribute('href', '#/' + page);
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                getPage(page, title, outputContainer, true);
+            });
+        });
+    }
 
     // Render the navigation menu
     function renderNav() {
@@ -121,6 +155,7 @@
         }
     }
 
+    /*
     // Bootstrap everything
     $(document).on('ready', function() {
         renderNav();
@@ -131,4 +166,14 @@
             initialLoad(null, false);
         });
     });
-})(jQuery);
+    */
+
+    // Bootstrap everything
+    document.addEventListener('DOMContentLoaded', function() {
+        renderNav();
+        initialLoad(null, true);
+        window.addEventListener('popstate', function(e) {
+            initialLoad(null, false);
+        });
+    });
+})();
