@@ -7,9 +7,9 @@ This release adds an extra check for the installed Nginx version so it does not 
 
 Additionally, we've added common bot protection :)
 
-It's a feature that's been asked for sometime now. To enable common bot protection simply comment out a single line in the custom_rules file (`include common_simple_protection.conf;`). If you're already an Engintron user, just copy the relevant "include..." line from the default custom_rules file. If this is a brand new Engintron install, then just comment out the relevant line.
+It's a feature that's been asked for sometime now. To enable common bot protection simply comment out a single line in the custom\_rules file (`include common_simple_protection.conf;`). If you're already an Engintron user, just copy the relevant "include..." line from the default custom\_rules file. If this is a brand new Engintron install, then just comment out the relevant line.
 
-We've also added extra configuration there to block custom bots, as well as specific IPs overall that may overload your server with thousands of requests daily. The custom_rules file contains some additional insight on how to use this feature.
+We've also added extra configuration there to block custom bots, as well as specific IPs overall that may overload your server with thousands of requests daily. The custom\_rules file contains some additional insight on how to use this feature.
 
 Keep in mind that bot protection as configured in Engintron's Nginx setup will immediately drop the connection (444 response) and not return an error page (e.g. 403 response). This is the most performant way to block unwanted traffic.
 
