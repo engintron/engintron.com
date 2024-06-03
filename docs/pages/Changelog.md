@@ -2,6 +2,17 @@
 
 ***To update to a newer version of Engintron, [please have a look here](pages/install).***
 
+### June 3rd, 2024 - v2.4 (Build 20240603)
+This release adds an extra check for the installed Nginx version so it does not apply the Nginx configuration patch that was introduced with v2.3.
+
+Additionally, we've added common bot protection :)
+
+It's a feature that's been asked for sometime now. To enable common bot protection simply comment out a single line in the custom_rules file (`include common_simple_protection.conf;`). If you're already an Engintron user, just copy the relevant "include..." line from the default custom_rules file. If this is a brand new Engintron install, then just comment out the relevant line.
+
+We've also added extra configuration there to block custom bots, as well as specific IPs overall that may overload your server with thousands of requests daily. The custom_rules file contains some additional insight on how to use this feature.
+
+Keep in mind that bot protection as configured in Engintron's Nginx setup will immediately drop the connection (444 response) and not return an error page (e.g. 403 response). This is the most performant way to block unwanted traffic.
+
 ### May 31st, 2024 - v2.3 (Build 20240531)
 This release fixes a warning ("nginx: [warn] the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/conf.d/default_https.conf...") introduced by updates in Nginx in May 2024.
 
