@@ -2,6 +2,11 @@
 
 ***To update to a newer version of Engintron, [please have a look here](pages/install).***
 
+### September 29th, 2024 - v2.5 (Build 20240929)
+This release resolves issue [#1493](https://github.com/engintron/engintron/issues/1493).
+
+It also bundles a new EA4 profile for EL8 (2024.2) distros like AlmaLinux 8.
+
 ### June 3rd, 2024 - v2.4 (Build 20240603)
 This release adds an extra check for the installed Nginx version so it does not apply the Nginx configuration patch that was introduced with v2.3.
 
