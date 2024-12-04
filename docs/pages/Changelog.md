@@ -2,6 +2,9 @@
 
 ***To update to a newer version of Engintron, [please have a look here](pages/install).***
 
+### December 4th, 2024 - v2.6 (Build 20241204)
+This release fixes the issue where SSL certificate changes (issues and renewals) where not immediately reflected on Nginx. Keep in mind this seems to have been an edge case, affecting some servers. However, by adding a small delay in the reload process for Nginx, the issue should go away for good.
+
 ### September 29th, 2024 - v2.5 (Build 20240929)
 This release resolves issue [#1493](https://github.com/engintron/engintron/issues/1493).
 

@@ -7,7 +7,7 @@
  */
 
 (function(){
-    var CURRENT_VERSION = '2.5';
+    var CURRENT_VERSION = '2.6';
     var b = document.getElementsByTagName('body')[0];
     function versionCompare(left, right) {
         if (typeof left + typeof right != 'stringstring') return false;
