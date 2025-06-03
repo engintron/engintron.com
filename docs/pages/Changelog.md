@@ -2,6 +2,12 @@
 
 ***To update to a newer version of Engintron, [please have a look here](pages/install).***
 
+### June 3rd, 2025 - v2.7 (Build 20250603)
+Updated MySQL Tuner to latest release.
+Fixed MySQL Tuner execution under AlmaLinux 8 (and possibly 9) where it could not pinpoint the credentials file previously.
+Updated Nginx protection rules.
+Updated Memcached install packages to cover up to PHP 8.3 (for RHEL 8+).
+
 ### December 4th, 2024 - v2.6 (Build 20241204)
 This release fixes the issue where SSL certificate changes (issues and renewals) where not immediately reflected on Nginx. Keep in mind this seems to have been an edge case, affecting some servers. However, by adding a small delay in the reload process for Nginx, the issue should go away for good.
 
