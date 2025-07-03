@@ -2,6 +2,17 @@
 
 ***To update to a newer version of Engintron, [please have a look here](pages/install).***
 
+### July 3rd, 2025 - v2.9 (Build 20250703)
+This update resolves a critical issue when uninstalling Engintron, that removes or breaks the Apache installation. This may be intended behaviour in some systems or a bug.
+
+For context, Engintron is adding the Apache module "mod_remoteip" when being installed in a system, as it allows Apache to be able to parse traffic data properly when Nginx acts as a proxy in front of Apache. This module has always worked "standalone", meaning Engintron would install it upon initial setup and remove it when Engintron was also removed without affecting Apache whatsoever.
+
+However it has been reported that mod_remoteip has apparently become a required dependency in some systems (those with CloudLinux packages or the CloudFlare module for Apache, as users reported on GitHub). As such, when Engintron is uninstalled, it would remove Apache in these systems.
+
+We highly recommend you upgrade Engintron so there are no issues with your system in the future should you choose to remove Engintron.
+
+If you have been affected by this issue, all you have to do is simply rebuild EA4 with your last working profile and the issue will be resolved.
+
 ### June 5th, 2025 - v2.8 (Build 20250605)
 This is an update that improves overall compatibility with EL9 releases.
 More specifically:
