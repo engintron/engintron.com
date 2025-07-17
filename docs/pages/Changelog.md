@@ -2,6 +2,13 @@
 
 ***To update to a newer version of Engintron, [please have a look here](pages/install).***
 
+### July 17, 2025 - v2.10
+This update resolves a critical issue in the proxying of traffic between Nginx and Apache, after an Apache update by cPanel (system version: Apache/2.4.64 (cPanel)).
+
+If your sites load with a "Misdirected Request" or "421 Misdirected Request" error page, please update to this new release to resolve the issue.
+
+The issue was first spotted on a CentOS 7 server (which apparently got an Apache update by cPanel) and it will most likely cascade to newer releases as well (if it hasn't already). For context this also occured on the morning of July 17,2025 on Please servers (Plesk and cPanel are owned by the same company for some years now), after a Plesk system upgrade on Ubuntu 22.04 servers, which indicates possible common development for Apache packages on Plesk and cPanel (and common bugs perhaps...).
+
 ### July 3rd, 2025 - v2.9 (Build 20250703)
 This update resolves a critical issue when uninstalling Engintron, that removes or breaks the Apache installation. This may be intended behaviour in some systems or a bug.
 
