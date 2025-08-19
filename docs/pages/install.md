@@ -38,9 +38,9 @@ Inside the Engintron app dashboard you'll also find some handy small utilities t
 
 ### Update (or re-install) Engintron
 
-To re-install or update Engintron, either use Enginton's WHM app (there's a link to update/re-install Engintron) or if you prefer the terminal simply follow the same process as described in the installation section above.
+To re-install or update Engintron, either use Enginton's WHM app (there's a link to update/re-install Engintron) or if you prefer the terminal you can use the command `engintron update` (as of version 2).
 
-HOWEVER, if you have customized any of the 5 main Nginx configuration files (nginx.conf, the 3 proxy\_params\_* files & default.conf), then these these configuration files will be overwritten but they are backed up first by being renamed with .bak file extension. To view these files over terminal you can do:
+TAKE NOTE, that if you have customized any of the 5 main Nginx configuration files (nginx.conf, the 3 proxy\_params\_* files & default.conf), then these these configuration files will be overwritten but they are backed up first by being renamed with .bak file extension. To view these files over terminal you can do:
 
 ```
 $ cd /etc/nginx
@@ -53,4 +53,4 @@ $ cat conf.d/default.conf.bak
 
 This way you can view your previous changes so you can copy them to the new configuration files installed.
 
-However **we HIGHLY recommend** that any customizations to Nginx's configuration are only performed inside the custom\_rules file. 99,999% of the times your modifications can go there.
+However **we HIGHLY recommend** that any customizations to Nginx's configuration are only performed inside the custom\_rules file or the 'overrides/' folder that was introduced in version 2.11 of Engintron (see the [changelog](pages/Changelog) for more info).
