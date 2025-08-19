@@ -2,7 +2,16 @@
 
 ***To update to a newer version of Engintron, [please have a look here](pages/install).***
 
-### July 17, 2025 - v2.10
+### August 19th, 2025 - v2.11
+This update introduces the option to completely override any aspect of Nginx's configuration and paves the way for more advanced features to come in future releases of Engintron (like rate limiting). A new `/etc/nginx/overrides/` folder is added upon initial installation or update (if it doesn't exist already). Inside it there are two folders `before` and `after` to add (you guessed it) files which override Nginx's configuration before and after loading its vhosts respectively. These files should end in `.conf` so they are auto-loaded by Nginx.
+
+These folders will never be cleared by Engintron's installer/updater.
+
+This also means you need to be extremely careful what you place there, as faulty configuration will break all your sites. Always use `nginx -t` in the terminal to verify your additions/changes (or the option from the Engintron WHM app).
+
+This update also fixes accessing Roundcube webmail when using the "cpanel.domain.tld" subdomain to access a cPanel account (for end users). Thanks to @alphabeero for contributing this.
+
+### July 17th, 2025 - v2.10
 This update resolves a critical issue in the proxying of traffic between Nginx and Apache, after an Apache update by cPanel (system version: Apache/2.4.64 (cPanel)).
 
 If your sites load with a "Misdirected Request" or "421 Misdirected Request" error page, please update to this new release to resolve the issue.
