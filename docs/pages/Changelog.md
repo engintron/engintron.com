@@ -6,6 +6,7 @@
 - This release updates the bot blocking section provided with Engintron to include (among others) the new AI crawler by Meta.
 - It also improves the robustness of the SSL vhost creation script in Nginx.
 - Finally it improves the overall update process by introducing an intermediate update script and skipping Nginx removal if the currently installed build comes from the nginx.org repo.
+- There is also a slight behavioural change in regards to `/etc/nginx/common_simple_protection.conf`. This file will now always be replaced by Engintron so as to keep your systems up to date with improved bot/crawler blocking. Any customizations you may have are backed up, but in the future, it's best to move these in your `/etc/nginx/custom_rules` file which is where `/etc/nginx/common_simple_protection.conf` is bootstrapped either way.
 
 ### August 19th, 2025 - v2.11
 This update introduces the option to completely override any aspect of Nginx's configuration and paves the way for more advanced features to come in future releases of Engintron (like rate limiting). A new `/etc/nginx/overrides/` folder is added upon initial installation or update (if it doesn't exist already). Inside it there are two folders `before` and `after` to add (you guessed it) files which override Nginx's configuration before and after loading its vhosts respectively. These files should end in `.conf` so they are auto-loaded by Nginx.
