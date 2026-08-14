@@ -2,6 +2,13 @@
 
 ***To update to a newer version of Engintron, [please have a look here](pages/install).***
 
+### August 14th, 2026 - v2.13
+- New, much better self-installer/updater for Engintron.
+- Updated bad bot protection rules (see /etc/nginx/common_simple_protection.conf for what is blocked when this is activated).
+- Added rate limiting in Nginx. It is disabled by default, but its configuration will be appended to your custom_rules file, even if you have edited it (otherwise Nginx will fail to compile its config). The 2 related files for rate limiting are included in /etc/nginx/overrides if you wish to see how this works. This is a well crafted rate limiting setup that will not cause any issues to normal web users, known bots etc. It has been extensively tested for months in all sorts of CMSs and custom apps and it works flawlessly. Rate limiting is set to 1 page request per second with a burst mode of up to 5 sub-requests. This is more than enough for human web traffic.
+- Fixed PHP warnings in the code that generates all Nginx vhosts, as this caused issues regenerating Nginx config files when SSL certificates in Apache renewed. See the relevant issue here https://github.com/engintron/engintron/issues/1514 for more info.
+- Switched default public DNS resolver to CloudFlare in Nginx.
+
 ### April 5th, 2026 - v2.12
 - This release updates the bot blocking section provided with Engintron to include (among others) the new AI crawler by Meta.
 - It also improves the robustness of the SSL vhost creation script in Nginx.
