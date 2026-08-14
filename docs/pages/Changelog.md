@@ -8,6 +8,7 @@
 - Added rate limiting in Nginx. It is disabled by default, but its configuration will be appended to your custom_rules file, even if you have edited it (otherwise Nginx will fail to compile its config). The 2 related files for rate limiting are included in /etc/nginx/overrides if you wish to see how this works. This is a well crafted rate limiting setup that will not cause any issues to normal web users, known bots etc. It has been extensively tested for months in all sorts of CMSs and custom apps and it works flawlessly. Rate limiting is set to 1 page request per second with a burst mode of up to 5 sub-requests. This is more than enough for human web traffic.
 - Fixed PHP warnings in the code that generates all Nginx vhosts, as this caused issues regenerating Nginx config files when SSL certificates in Apache renewed. See the relevant issue here https://github.com/engintron/engintron/issues/1514 for more info.
 - Switched default public DNS resolver to CloudFlare in Nginx.
+- Improved the log format for /var/log/nginx/access.log (the default/master Nginx access log) to also include the actual domain for each URL logged. This makes debugging a lot easier.
 
 ### April 5th, 2026 - v2.12
 - This release updates the bot blocking section provided with Engintron to include (among others) the new AI crawler by Meta.
